@@ -1,0 +1,33 @@
+{
+  "name": "Zahorí - Buscador de Libros",
+  "short_name": "Zahorí",
+  "description": "Buscador de disponibilidad de libros en tiempo real en la Red de Bibliotecas de Madrid y sincronización con Goodreads",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fdfbf7",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "lang": "es-ES",
+  "categories": ["books", "reference", "utilities"],
+  "icons": [
+    {
+      "src": "/static/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

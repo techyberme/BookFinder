@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e11d48" />
+      <stop offset="100%" stop-color="#be123c" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#be123c" flood-opacity="0.35" />
+    </filter>
+  </defs>
+  
+  <!-- Rounded Base Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+  
+  <!-- Center Crimson Badge -->
+  <rect x="96" y="96" width="320" height="320" rx="64" fill="url(#crimsonGrad)" filter="url(#glow)" />
+  
+  <!-- Stylized Book & Compass (Zahorí) Motif -->
+  <!-- Left Page -->
+  <path d="M 160 330 C 190 320 225 322 256 340 L 256 190 C 225 175 190 172 160 182 Z" fill="#ffffff" opacity="0.95" />
+  <!-- Right Page -->
+  <path d="M 352 330 C 322 320 287 322 256 340 L 256 190 C 287 175 322 172 352 182 Z" fill="#ffffff" />
+  
+  <!-- Golden Bookmark Ribbon -->
+  <path d="M 250 170 L 262 170 L 262 250 L 256 244 L 250 250 Z" fill="#fbbf24" />
+  
+  <!-- Zahorí Star / Dowsing Accent -->
+  <circle cx="256" cy="150" r="12" fill="#fbbf24" />
+  <path d="M 256 130 L 256 170 M 236 150 L 276 150" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" />
+</svg>

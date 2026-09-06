@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-slate-50">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Zahorí — Buscador de Libros & Goodreads</title>
+  
+  <!-- PWA Web App Manifest & Mobile App Identity -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Zahorí" />
+  <link rel="apple-touch-icon" href="/static/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/icon-192.png" />
+  <link rel="icon" type="image/svg+xml" href="/static/icon.svg" />
+
+  <!-- Google Fonts: Fraunces (Editorial Serif), Plus Jakarta Sans (UI Body), JetBrains Mono (Tech/Metadata) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/static/styles.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['Fraunces', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#fdf2f2',
+              100: '#fde8e8',
+              500: '#c8102e', // Madrid crimson red
+              600: '#a50e26',
+              700: '#820b1e',
+              900: '#4c0612',
+            },
+            neutral: {
+              850: '#1e293b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-full flex flex-col font-sans text-slate-800 antialiased bg-slate-50 selection:bg-rose-100 selection:text-brand-900 pt-[env(safe-area-inset-top,0px)] pb-[env(safe-area-inset-bottom,0px)]">
+
+  <!-- Top Navigation Header with Integrated Profile Management -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-30 shadow-xs">
+    <div class="max-w-6xl mx-auto px-3.5 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-2">
+      <div class="flex items-center space-x-2.5 sm:space-x-3 min-w-0">
+        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-slate-900 flex items-center justify-center text-white font-bold text-sm tracking-wider shadow-xs font-sans flex-shrink-0">
+          <span class="text-brand-500 font-extrabold mr-0.5">Z</span>H
+        </div>
+        <div class="min-w-0">
+          <h1 class="text-sm sm:text-base font-bold text-slate-900 leading-tight tracking-tight truncate">Zahorí</h1>
+          <p class="text-[11px] sm:text-xs text-slate-500 font-medium truncate">Bibliotecas de la Comunidad de Madrid</p>
+        </div>
+      </div>
+
+      <!-- Right Side Header: Dynamic User Profile Chip or Connect Button -->
+      <div class="flex items-center space-x-2 sm:space-x-3 flex-shrink-0">
+        <!-- Connected Profile Chip (Displaying user's real name) -->
+        <button
+          type="button"
+          id="header-profile-btn"
+          class="hidden inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 min-h-[40px] sm:min-h-[44px] rounded-full bg-slate-100 hover:bg-slate-200/80 border border-slate-200 transition-all text-xs font-sans group focus:outline-none"
+          title="Configurar perfil de Goodreads"
+        >
+          <span id="header-avatar-initials" class="w-6 h-6 rounded-full bg-amber-500 text-white font-bold text-[10px] flex items-center justify-center flex-shrink-0 font-sans">
+            GR
+          </span>
+          <span class="flex items-center gap-1 sm:gap-1.5 font-medium text-slate-700">
+            <span id="header-user-display-name" class="text-slate-900 font-bold max-w-[90px] sm:max-w-[140px] truncate">Mi Perfil</span>
+            <span class="text-slate-300 hidden sm:inline">&bull;</span>
+            <span id="header-shelf-name" class="text-slate-600 bg-white px-1.5 py-0.5 rounded text-[10px] border border-slate-200 font-mono hidden sm:inline">to-read</span>
+          </span>
+          <span class="text-[11px] text-slate-400 group-hover:text-slate-700 transition-colors ml-0.5">Cambiar</span>
+        </button>
+
+        <!-- Connect Profile Button (Shown when no user is saved) -->
+        <button
+          type="button"
+          id="header-connect-btn"
+          class="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-2 min-h-[40px] sm:min-h-[44px] bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold rounded-md shadow-xs transition-colors focus:outline-none"
+        >
+          <svg class="w-3.5 h-3.5 text-amber-400 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6zm-2-8c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
+          </svg>
+          <span class="whitespace-nowrap">Conectar Goodreads</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 max-w-6xl w-full mx-auto px-3.5 sm:px-6 lg:px-8 py-5 sm:py-8">
+    
+    <!-- Mode Switcher Tabs (Touch-friendly & Horizontal Scrolling on Mobile) -->
+    <div class="flex items-center space-x-2 border-b border-slate-200 mb-5 sm:mb-6 overflow-x-auto no-scrollbar">
+      <button
+        type="button"
+        id="tab-btn-goodreads"
+        class="tab-btn active px-3.5 sm:px-4 py-2.5 min-h-[44px] text-xs sm:text-sm font-bold text-slate-900 border-b-2 border-slate-900 transition-colors flex items-center gap-2 whitespace-nowrap flex-shrink-0"
+      >
+        <svg class="w-4 h-4 text-amber-600 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6zm-2-8c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
+        </svg>
+        Estantería Goodreads
+      </button>
+      <button
+        type="button"
+        id="tab-btn-direct"
+        class="tab-btn px-3.5 sm:px-4 py-2.5 min-h-[44px] text-xs sm:text-sm font-medium text-slate-500 hover:text-slate-900 border-b-2 border-transparent transition-colors flex items-center gap-2 whitespace-nowrap flex-shrink-0"
+      >
+        <svg class="w-4 h-4 text-slate-700 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        Búsqueda Directa en Catálogo
+      </button>
+    </div>
+
+    <!-- Global Preferred Libraries & Proximity Filter with Balanced Aligned Blocks -->
+    <div class="bg-white rounded-lg border border-slate-200 shadow-sm p-3.5 sm:p-4 mb-5 sm:mb-6">
+      <div class="flex items-center justify-between mb-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center">
+          <svg class="w-3.5 h-3.5 mr-1.5 text-slate-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Bibliotecas Preferidas & Radio
+        </span>
+        <span class="text-[11px] text-slate-400 font-normal hidden sm:inline">Aplica a ambas pestañas</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4 items-stretch">
+        <!-- Searchable Library Multi-Select Dropdown Box -->
+        <div class="md:col-span-2 bg-slate-50 p-3 sm:p-3.5 rounded-lg border border-slate-200 flex flex-col justify-between">
+          <div>
+            <label for="library-search-input" class="text-xs font-semibold text-slate-700 mb-1.5 block">
+              Bibliotecas de referencia (opcional):
+            </label>
+            <div class="relative">
+              <input
+                type="text"
+                id="library-search-input"
+                placeholder="Buscar bibliotecas (ej: Eugenio Trías, José Acuña, Retiro, Chamartín...)"
+                autocomplete="off"
+                class="w-full text-xs px-3.5 py-2.5 min-h-[44px] bg-white border border-slate-300 rounded-md text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 font-sans"
+              />
+              
+              <!-- Dropdown list -->
+              <div id="library-dropdown-list" class="hidden absolute top-full left-0 right-0 mt-1 max-h-56 overflow-y-auto bg-white border border-slate-200 rounded-md shadow-lg z-50 py-1 divide-y divide-slate-100 text-xs">
+                <!-- Populated dynamically via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Selected Library Chips Container -->
+          <div id="selected-library-chips" class="flex flex-wrap gap-1.5 mt-2.5 min-h-[22px]">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- Proximity Radius Two-Way Synchronized Box -->
+        <div class="bg-slate-50 p-3 sm:p-3.5 rounded-lg border border-slate-200 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <label for="input-radius-num" class="text-xs font-semibold text-slate-700">Radio de proximidad:</label>
+              <div class="flex items-center space-x-1">
+                <input
+                  type="number"
+                  id="input-radius-num"
+                  min="1"
+                  max="20"
+                  step="1"
+                  value="5"
+                  class="w-12 px-1.5 py-1 text-xs font-mono font-bold text-right bg-white border border-slate-300 rounded focus:outline-none focus:ring-1 focus:ring-slate-900 text-slate-900"
+                />
+                <span class="text-xs font-semibold text-slate-600 font-mono">km</span>
+              </div>
+            </div>
+
+            <div class="pt-1.5">
+              <input
+                type="range"
+                id="input-radius"
+                name="radius_km"
+                min="1"
+                max="20"
+                step="1"
+                value="5"
+                class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-slate-900"
+              />
+
+              <!-- Aligned Reference Ticks matching min=1, max=20, step=1 -->
+              <div class="flex justify-between text-[10px] text-slate-400 font-mono mt-1.5 px-0.5 select-none">
+                <span>1 km</span>
+                <span>5 km</span>
+                <span>10 km</span>
+                <span>15 km</span>
+                <span>20 km</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-[11px] text-slate-400 font-normal mt-2.5 hidden sm:block">
+            Recomienda sucursales alternativas dentro del radio.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ================= VIEW 1: GOODREADS SHELF (DEFAULT) ================= -->
+    <div id="view-goodreads-shelf" class="space-y-5 sm:space-y-6">
+      
+      <!-- Goodreads Error Banner -->
+      <div id="gr-error-banner" class="hidden bg-red-50 border border-red-200 rounded-md p-4 text-sm text-red-700">
+        <div class="flex items-start">
+          <svg class="h-5 w-5 text-red-500 mr-2.5 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <div>
+            <span class="font-bold block mb-0.5">Error de Goodreads</span>
+            <span id="gr-error-message"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- No Profile Zero-State Card (Shown only when no user is saved in LocalStorage) -->
+      <div id="gr-no-profile-state" class="hidden bg-white rounded-lg border border-slate-200 p-8 sm:p-12 text-center shadow-xs">
+        <div class="w-12 h-12 rounded-full bg-amber-50 text-amber-700 flex items-center justify-center mx-auto mb-3">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6zm-2-8c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
+          </svg>
+        </div>
+        <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-1 font-serif">Conecta tu estantería de Goodreads</h3>
+        <p class="text-xs sm:text-sm text-slate-500 max-w-sm mx-auto mb-4 font-sans">
+          Comprueba automáticamente la disponibilidad de los libros de tu lista en las bibliotecas públicas de Madrid.
+        </p>
+        <button type="button" id="gr-connect-prompt-btn" class="inline-flex items-center justify-center px-4 py-2.5 min-h-[44px] bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold rounded-md shadow-xs transition-colors">
+          Conectar perfil público
+        </button>
+      </div>
+
+      <!-- Goodreads Shelf Dashboard & Controls -->
+      <div id="gr-shelf-dashboard" class="hidden space-y-5 sm:space-y-6">
+
+        <!-- "Recomendaciones" Hero Section (Bubble-Effect Light Rose) -->
+        <section id="gr-recommendations-section" class="hidden bg-gradient-to-br from-rose-50/95 via-red-50/80 to-pink-50/85 backdrop-blur-md rounded-2xl sm:rounded-3xl p-4 sm:p-6 border border-red-200/70 shadow-xl shadow-red-100/50 space-y-4 transition-all duration-300">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-red-100/80 pb-3 gap-2">
+            <div class="flex items-center space-x-2.5">
+              <span class="p-2 rounded-xl bg-red-500/10 text-brand-600 border border-red-200/50 flex-shrink-0">
+                <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+              </span>
+              <div>
+                <h3 class="text-sm sm:text-base font-bold text-slate-900 tracking-tight">Recomendaciones Disponibles</h3>
+                <p class="text-[11px] sm:text-xs text-slate-600">Libros de tu lista con disponibilidad inmediata para recoger hoy.</p>
+              </div>
+            </div>
+            <button type="button" id="gr-refresh-recs-btn" class="text-xs font-semibold text-slate-700 hover:text-slate-900 px-3 py-1.5 min-h-[36px] rounded-xl bg-white/80 hover:bg-white border border-red-200/60 shadow-2xs transition-all flex items-center gap-1.5 self-end sm:self-auto">
+              <svg class="w-3.5 h-3.5 text-brand-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+              </svg>
+              <span>Nuevas sugerencias</span>
+            </button>
+          </div>
+
+          <!-- Recommendations Loading State -->
+          <div id="gr-recs-loading" class="hidden py-6 text-center text-xs text-slate-600 flex items-center justify-center space-x-2">
+            <svg class="animate-spin h-4 w-4 text-brand-600" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <span class="font-medium">Buscando libros con disponibilidad inmediata en Madrid...</span>
+          </div>
+
+          <!-- Recommendations Cards Grid -->
+          <div id="gr-recs-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Injected dynamically via JS -->
+          </div>
+        </section>
+        
+        <!-- Batch Actions & Filters Bar (Touch Responsive) -->
+        <div class="bg-white rounded-lg border border-slate-200 p-3.5 sm:p-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 text-sm">
+          <div class="flex items-center flex-wrap gap-2 text-slate-700">
+            <span class="font-bold text-slate-900" id="gr-total-count">0 libros</span>
+            <span class="text-slate-300">&bull;</span>
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200" id="gr-available-count">
+              0 disponibles en Madrid
+            </span>
+          </div>
+
+          <div class="flex items-center flex-wrap gap-2.5 w-full md:w-auto justify-between md:justify-end">
+            <!-- Filter by Shelf Search -->
+            <input
+              type="text"
+              id="gr-filter-input"
+              placeholder="Filtrar libros..."
+              class="text-xs px-3 py-2 min-h-[40px] bg-slate-50 border border-slate-300 rounded text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 focus:bg-white flex-1 sm:w-44 font-sans"
+            />
+
+            <!-- Filter Availability Toggle -->
+            <label class="inline-flex items-center cursor-pointer text-xs font-semibold text-slate-700 select-none py-1 min-h-[40px]">
+              <input type="checkbox" id="gr-only-available-toggle" class="sr-only peer" />
+              <div class="w-8 h-4 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-emerald-600 relative"></div>
+              <span class="ml-1.5 text-slate-700 whitespace-nowrap">Solo disponibles</span>
+            </label>
+
+            <!-- Check All Batch Button -->
+            <button
+              type="button"
+              id="gr-check-all-btn"
+              class="inline-flex items-center justify-center px-3.5 py-2 min-h-[40px] bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold rounded shadow-sm transition-colors focus:outline-none disabled:opacity-50 w-full sm:w-auto whitespace-nowrap"
+            >
+              <svg id="gr-check-all-spinner" class="animate-spin -ml-0.5 mr-1.5 h-3.5 w-3.5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              <span id="gr-check-all-text">Comprobar Todos</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Batch Progress Bar (when checking all) -->
+        <div id="gr-progress-container" class="hidden bg-white border border-slate-200 rounded p-3 text-xs space-y-1.5">
+          <div class="flex justify-between font-medium text-slate-700">
+            <span id="gr-progress-label">Comprobando disponibilidad en catálogo de Madrid...</span>
+            <span id="gr-progress-stats" class="font-mono text-slate-500">0 / 0</span>
+          </div>
+          <div class="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
+            <div id="gr-progress-bar" class="bg-brand-500 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- Shelf Books Grid (Responsive Mobile Card Transitions) -->
+        <div id="gr-books-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
+          <!-- Rendered dynamically via JS -->
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ================= VIEW 2: DIRECT SEARCH ================= -->
+    <div id="view-direct-search" class="hidden space-y-5 sm:space-y-6">
+      <!-- Search Card -->
+      <div class="bg-white rounded-lg border border-slate-200 shadow-sm p-4 sm:p-6">
+        <div class="mb-4">
+          <h2 class="text-base sm:text-lg font-bold text-slate-900 tracking-tight">Buscar por Título o Autor</h2>
+          <p class="text-xs sm:text-sm text-slate-500">Consulte la disponibilidad física en sala, sucursales y fechas estimadas de devolución en toda la red pública.</p>
+        </div>
+
+        <form id="search-form" class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Title Input -->
+            <div>
+              <label for="input-title" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+                Título del Libro
+              </label>
+              <div class="relative">
+                <input
+                  type="text"
+                  id="input-title"
+                  name="title"
+                  placeholder="Ej: Cien años de soledad, Don Quijote, El infinito en un junco..."
+                  class="w-full px-3.5 py-2.5 min-h-[44px] bg-slate-50 border border-slate-300 rounded-md text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent focus:bg-white transition-colors font-sans"
+                />
+              </div>
+            </div>
+
+            <!-- Author Input -->
+            <div>
+              <label for="input-author" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1.5">
+                Autor / Autora
+              </label>
+              <div class="relative">
+                <input
+                  type="text"
+                  id="input-author"
+                  name="author"
+                  placeholder="Ej: García Márquez, Cervantes, Irene Vallejo, J.K. Rowling..."
+                  class="w-full px-3.5 py-2.5 min-h-[44px] bg-slate-50 border border-slate-300 rounded-md text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900 focus:border-transparent focus:bg-white transition-colors font-sans"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Examples & Actions -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between pt-2 gap-3 border-t border-slate-100">
+            <div class="flex items-center flex-wrap gap-1.5 text-xs text-slate-500">
+              <span class="font-semibold text-slate-600">Sugerencias:</span>
+              <button type="button" class="quick-fill-btn px-2.5 py-1 min-h-[32px] rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition-colors" data-title="Cien años de soledad" data-author="Gabriel García Márquez">Cien años de soledad</button>
+              <button type="button" class="quick-fill-btn px-2.5 py-1 min-h-[32px] rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition-colors" data-title="El infinito en un junco" data-author="Irene Vallejo">El infinito en un junco</button>
+              <button type="button" class="quick-fill-btn px-2.5 py-1 min-h-[32px] rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold transition-colors" data-title="Ficciones" data-author="Jorge Luis Borges">Ficciones</button>
+            </div>
+
+            <div class="flex items-center space-x-3 w-full sm:w-auto justify-end">
+              <button
+                type="button"
+                id="clear-btn"
+                class="px-3 py-2 min-h-[44px] text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-md transition-colors"
+              >
+                Limpiar
+              </button>
+              <button
+                type="submit"
+                id="submit-btn"
+                class="inline-flex items-center justify-center px-5 py-2.5 min-h-[44px] bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold rounded-md shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-slate-900 disabled:opacity-50 flex-1 sm:flex-initial whitespace-nowrap"
+              >
+                <svg id="btn-spinner" class="animate-spin -ml-1 mr-2 h-4 w-4 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span id="btn-text">Consultar Catálogo</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Alert / Error Banner -->
+      <div id="error-banner" class="hidden bg-red-50 border border-red-200 rounded-md p-4 text-sm text-red-700">
+        <div class="flex items-start">
+          <svg class="h-5 w-5 text-red-500 mr-2.5 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <div>
+            <span class="font-bold block mb-0.5">Error en la consulta</span>
+            <span id="error-message"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Loading Skeleton State -->
+      <div id="loading-state" class="hidden space-y-6">
+        <div class="bg-white rounded-lg border border-slate-200 p-6 animate-pulse">
+          <div class="h-4 bg-slate-200 rounded w-1/4 mb-3"></div>
+          <div class="h-6 bg-slate-200 rounded w-3/4 mb-4"></div>
+          <div class="space-y-2">
+            <div class="h-3 bg-slate-100 rounded w-1/2"></div>
+            <div class="h-3 bg-slate-100 rounded w-1/3"></div>
+          </div>
+          <div class="mt-6 border-t border-slate-100 pt-4 space-y-3">
+            <div class="h-8 bg-slate-100 rounded"></div>
+            <div class="h-8 bg-slate-100 rounded"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Section -->
+      <section id="results-section" class="hidden space-y-6">
+        <!-- Stats & Filter Bar -->
+        <div class="bg-white rounded-lg border border-slate-200 px-3.5 sm:px-4 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-sm">
+          <div class="flex items-center flex-wrap gap-2 text-slate-700 font-sans">
+            <span class="font-bold text-slate-900" id="stats-total-editions">0 ediciones</span>
+            <span class="text-slate-300">&bull;</span>
+            <span class="text-slate-600" id="stats-total-copies">0 ejemplares</span>
+            <span class="text-slate-300">&bull;</span>
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200" id="stats-available-copies">
+              0 disponibles
+            </span>
+          </div>
+
+          <div class="flex items-center space-x-3 w-full sm:w-auto justify-between">
+            <!-- Live Branch Search Filter -->
+            <div class="relative flex-1 sm:w-56">
+              <input
+                type="text"
+                id="branch-filter-input"
+                placeholder="Filtrar por biblioteca..."
+                class="w-full text-xs px-2.5 py-1.5 min-h-[38px] bg-slate-50 border border-slate-300 rounded text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 focus:bg-white font-sans"
+              />
+            </div>
+
+            <!-- Availability Filter Toggle -->
+            <label class="inline-flex items-center cursor-pointer text-xs font-semibold text-slate-700 select-none min-h-[38px]">
+              <input type="checkbox" id="only-available-toggle" class="sr-only peer" />
+              <div class="w-8 h-4 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-emerald-600 relative"></div>
+              <span class="ml-2 text-slate-700 whitespace-nowrap">Solo disponibles</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Results Container -->
+        <div id="results-container" class="space-y-4 sm:space-y-6">
+          <!-- Rendered dynamically via JS -->
+        </div>
+      </section>
+
+      <!-- Empty State -->
+      <div id="empty-state" class="hidden bg-white rounded-lg border border-slate-200 p-8 sm:p-12 text-center">
+        <div class="w-12 h-12 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        <h3 class="text-base font-bold text-slate-900 mb-1 font-serif">No se encontraron ejemplares</h3>
+        <p class="text-xs sm:text-sm text-slate-500 max-w-md mx-auto font-sans">
+          No se recuperaron resultados en el catálogo con los términos indicados. Pruebe a buscar por solo el título principal o por el autor.
+        </p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Goodreads Profile Configuration Modal (Mobile Sheet / Dialog) -->
+  <div id="profile-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3.5 sm:p-4">
+    <div class="bg-white rounded-xl border border-slate-200 shadow-xl max-w-md w-full overflow-hidden font-sans my-auto">
+      <div class="p-4 sm:p-5 border-b border-slate-200 flex items-center justify-between bg-white">
+        <div class="flex items-center space-x-2.5">
+          <div class="w-8 h-8 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-xs flex-shrink-0">
+            GR
+          </div>
+          <div>
+            <h3 class="text-sm sm:text-base font-bold text-slate-900">Perfil de Goodreads</h3>
+            <p class="text-[11px] sm:text-xs text-slate-500">Sincroniza tu lista de lectura con las bibliotecas</p>
+          </div>
+        </div>
+        <button type="button" id="profile-modal-close-btn" class="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded text-slate-400 hover:text-slate-700 hover:bg-slate-100">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <form id="goodreads-modal-form" class="p-4 sm:p-5 space-y-4">
+        <div>
+          <label for="input-gr-user" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+            ID de Usuario o Enlace de Perfil
+          </label>
+          <input
+            type="text"
+            id="input-gr-user"
+            placeholder="Ej: 155193797-javier-bermejo o https://goodreads.com/user/show/155193797"
+            class="w-full px-3.5 py-2.5 min-h-[44px] bg-slate-50 border border-slate-300 rounded-md text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 focus:bg-white font-sans"
+          />
+        </div>
+
+        <div>
+          <label for="input-gr-shelf" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
+            Estantería (Shelf)
+          </label>
+          <input
+            type="text"
+            id="input-gr-shelf"
+            value="to-read"
+            placeholder="to-read, currently-reading, read..."
+            class="w-full px-3.5 py-2.5 min-h-[44px] bg-slate-50 border border-slate-300 rounded-md text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 focus:bg-white font-sans"
+          />
+        </div>
+
+        <div class="pt-2 border-t border-slate-100 flex items-center justify-between">
+          <button type="button" id="gr-demo-btn" class="text-xs text-slate-600 hover:text-slate-900 font-semibold underline min-h-[36px] py-1">
+            Cargar cuenta demo
+          </button>
+
+          <button type="button" id="gr-disconnect-btn" class="hidden text-xs text-red-600 hover:text-red-800 font-semibold min-h-[36px] py-1">
+            Desconectar perfil
+          </button>
+        </div>
+
+        <div class="pt-2 flex items-center justify-end gap-2">
+          <button type="button" id="profile-modal-cancel-btn" class="px-3.5 py-2.5 min-h-[44px] text-xs font-semibold text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-md transition-colors">
+            Cancelar
+          </button>
+          <button type="submit" id="gr-submit-btn" class="px-4 py-2.5 min-h-[44px] bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold rounded-md shadow-xs transition-colors flex items-center justify-center">
+            <svg id="gr-spinner" class="animate-spin -ml-0.5 mr-1.5 h-3.5 w-3.5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            <span id="gr-btn-text">Sincronizar</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Detail Modal for Goodreads Card Holdings Breakdown -->
+  <div id="holdings-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3.5 sm:p-4">
+    <div class="bg-white rounded-xl border border-slate-200 shadow-xl max-w-3xl w-full max-h-[90vh] flex flex-col overflow-hidden my-auto">
+      <div class="p-4 sm:p-5 border-b border-slate-200 flex items-start justify-between bg-white">
+        <div class="min-w-0 pr-2">
+          <span class="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-slate-400 font-sans">Detalle de Ejemplares en Red</span>
+          <h3 id="modal-book-title" class="text-sm sm:text-base font-bold text-slate-900 leading-snug font-serif line-clamp-2"></h3>
+          <p id="modal-book-author" class="text-xs text-slate-600 font-medium font-sans truncate"></p>
+        </div>
+        <button type="button" id="modal-close-btn" class="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded text-slate-400 hover:text-slate-700 hover:bg-slate-100 flex-shrink-0">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="modal-holdings-body" class="p-4 sm:p-5 overflow-y-auto space-y-4 text-xs font-sans">
+        <!-- Injected dynamically via JS -->
+      </div>
+
+      <div class="p-3 bg-slate-50 border-t border-slate-200 flex justify-end">
+        <button type="button" id="modal-footer-close-btn" class="px-4 py-2 min-h-[44px] bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-semibold rounded font-sans">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-4 mt-auto font-sans">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+      <div>
+        Red de Bibliotecas Públicas de la Comunidad de Madrid.
+      </div>
+      <div>
+        Zahorí PWA &bull; Consulta y sincronización de lecturas
+      </div>
+    </div>
+  </footer>
+
+  <!-- Frontend Logic -->
+  <script src="/static/app.js"></script>
+</body>
+</html>
