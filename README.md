@@ -1,4 +1,4 @@
-# 📖 Zahorí — Buscador de Libros & Goodreads (Bibliotecas de Madrid)
+# 📖 Zahorí — Madrid Public Libraries x Goodreads
 
 A functional, high-performance web tool and Progressive Web Application (PWA) to search book availability across the **Madrid Public Libraries Network** (*Red de Bibliotecas de la Comunidad de Madrid* - AbsysNet catalog) with **library proximity filtering**, **Goodreads shelf synchronization**, and **geospatial recommendations**.
 
