@@ -1,0 +1,22 @@
+{
+  "sourceLanguage" : "es",
+  "strings" : {
+    "Búsqueda cancelada" : {},
+    "Código HTTP %lld" : {},
+    "El catálogo devolvió una página no reconocida" : {},
+    "El servidor tardó demasiado en responder" : {},
+    "Error al enviar la consulta al catálogo: %@" : {},
+    "Error al obtener estantería de Goodreads (Código HTTP %lld)." : {},
+    "Error al obtener estantería de Goodreads: %@" : {},
+    "Estantería '%@' o usuario '%@' no encontrados en Goodreads. Asegúrese de que el perfil sea público." : {},
+    "Ficha del catálogo sin título reconocible" : {},
+    "No se pudieron cargar las fichas del catálogo" : {},
+    "No se pudo conectar con el catálogo de bibliotecas: %@" : {},
+    "No se pudo identificar un ID de usuario de Goodreads válido." : {},
+    "Respuesta XML no válida de Goodreads: %@" : {},
+    "Respuesta del catálogo no válida" : {},
+    "Sin conexión a Internet" : {},
+    "no se pudo iniciar la sesión del OPAC" : {}
+  },
+  "version" : "1.0"
+}

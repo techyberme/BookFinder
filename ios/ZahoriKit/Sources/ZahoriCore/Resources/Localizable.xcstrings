@@ -1,0 +1,13 @@
+{
+  "sourceLanguage" : "es",
+  "strings" : {
+    "Catálogo no disponible" : {},
+    "Disponible en %@" : {},
+    "Disponible en %@ (a %@ km)" : {},
+    "No disponible" : {},
+    "No encontrado en catálogo" : {},
+    "Prestado (%lld ejemplares en red)" : {},
+    "Prestado en %@" : {}
+  },
+  "version" : "1.0"
+}

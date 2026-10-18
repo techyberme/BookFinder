@@ -1,0 +1,3304 @@
+{
+ "libraries_list_ids": [
+  "alcala_cardenal_cisneros",
+  "alcobendas",
+  "alcorcon",
+  "ortega_y_gasset",
+  "getafe",
+  "las_rozas_tolstoi",
+  "leganes",
+  "pio_baroja",
+  "joaquin_leguina",
+  "gloria_fuertes",
+  "ana_maria_matute",
+  "la_chata",
+  "luis_rosales",
+  "conde_duque",
+  "ivan_de_vargas",
+  "mario_vargas_llosa",
+  "pedro_salinas",
+  "damaso_alonso",
+  "chamartin_francisco_ibanez",
+  "jose_luis_sampedro",
+  "ruiz_egea",
+  "antonio_machado",
+  "ciudad_lineal",
+  "la_elipa",
+  "pablo_neruda",
+  "jose_saramago",
+  "fuencarral_rafael_alberti",
+  "hortaleza",
+  "huerta_de_la_salud",
+  "maria_lejarraga",
+  "aluche",
+  "antonio_mingote",
+  "angel_gonzalez",
+  "jose_acuna",
+  "javier_marias",
+  "miguel_delibes_moratalaz",
+  "moratalaz",
+  "miguel_hernandez",
+  "paco_rabal",
+  "portazgo",
+  "vallecas",
+  "elena_fortun",
+  "eugenio_trias",
+  "david_gistau",
+  "manuel_alvar",
+  "canillejas",
+  "san_blas",
+  "manuel_vazquez_montalban",
+  "maria_zambrano",
+  "gabriel_garcia_marquez",
+  "jose_hierro",
+  "san_fermin",
+  "vicalvaro",
+  "benjamin_palencia",
+  "gerardo_diego",
+  "luis_martin_santos",
+  "francisco_umbral_villaverde",
+  "maria_moliner",
+  "villaverde",
+  "majadahonda_umbral",
+  "mostoles",
+  "pozuelo_cervantes",
+  "rivas_gloria_fuertes",
+  "pedro_antonio_de_alarcon"
+ ],
+ "normalize": {
+  "": "",
+  "BP Aluche (Latina)": "bp aluche latina",
+  "BP Ana María Matute (Carabanchel)": "bp ana maria matute carabanchel",
+  "BP Antonio Machado (Ciudad Lineal)": "bp antonio machado ciudad lineal",
+  "BP Antonio Mingote (Latina)": "bp antonio mingote latina",
+  "BP Benjamín Palencia (Villa de Vallecas)": "bp benjamin palencia villa de vallecas",
+  "BP Canillejas (San Blas)": "bp canillejas san blas",
+  "BP Ciudad Lineal": "bp ciudad lineal",
+  "BP Conde Duque (Centro)": "bp conde duque centro",
+  "BP David Gistau (Salamanca)": "bp david gistau salamanca",
+  "BP Dámaso Alonso (Chamartín)": "bp damaso alonso chamartin",
+  "BP Elena Fortún (Retiro)": "bp elena fortun retiro",
+  "BP Eugenio Trías (Retiro)": "bp eugenio trias retiro",
+  "BP Francisco Ibáñez (Chamartín)": "bp francisco ibanez chamartin",
+  "BP Francisco Umbral (Villaverde)": "bp francisco umbral villaverde",
+  "BP Gabriel García Márquez (Usera)": "bp gabriel garcia marquez usera",
+  "BP Gerardo Diego (Villa de Vallecas)": "bp gerardo diego villa de vallecas",
+  "BP Gloria Fuertes (Barajas)": "bp gloria fuertes barajas",
+  "BP Hortaleza": "bp hortaleza",
+  "BP Huerta de la Salud (Hortaleza)": "bp huerta de la salud hortaleza",
+  "BP Iván de Vargas (Centro)": "bp ivan de vargas centro",
+  "BP Javier Marías (Moratalaz)": "bp javier marias moratalaz",
+  "BP José Hierro (Usera)": "bp jose hierro usera",
+  "BP José Luis Sampedro (Chamberí)": "bp jose luis sampedro chamberi",
+  "BP José Saramago (Fuencarral)": "bp jose saramago fuencarral",
+  "BP La Chata (Carabanchel)": "bp la chata carabanchel",
+  "BP La Elipa (Ciudad Lineal)": "bp la elipa ciudad lineal",
+  "BP Luis Martín-Santos (Villa de Vallecas)": "bp luis martin santos villa de vallecas",
+  "BP Luis Rosales (Carabanchel)": "bp luis rosales carabanchel",
+  "BP Manuel Vázquez Montalbán (Tetuán)": "bp manuel vazquez montalban tetuan",
+  "BP Mario Vargas Llosa (Centro)": "bp mario vargas llosa centro",
+  "BP María Lejárraga (Hortaleza)": "bp maria lejarraga hortaleza",
+  "BP María Moliner (Villaverde)": "bp maria moliner villaverde",
+  "BP María Zambrano (Tetuán)": "bp maria zambrano tetuan",
+  "BP Miguel Delibes (Moratalaz)": "bp miguel delibes moratalaz",
+  "BP Miguel Hernández (Puente de Vallecas)": "bp miguel hernandez puente de vallecas",
+  "BP Moratalaz": "bp moratalaz",
+  "BP Pablo Neruda (Ciudad Lineal)": "bp pablo neruda ciudad lineal",
+  "BP Paco Rabal (Puente de Vallecas)": "bp paco rabal puente de vallecas",
+  "BP Pedro Salinas (Centro)": "bp pedro salinas centro",
+  "BP Portazgo (Puente de Vallecas)": "bp portazgo puente de vallecas",
+  "BP Pío Baroja (Arganzuela)": "bp pio baroja arganzuela",
+  "BP Rafael Alberti (Fuencarral)": "bp rafael alberti fuencarral",
+  "BP Ruiz Egea (Chamberí)": "bp ruiz egea chamberi",
+  "BP San Blas": "bp san blas",
+  "BP San Fermín (Usera)": "bp san fermin usera",
+  "BP Vallecas": "bp vallecas",
+  "BP Vicálvaro": "bp vicalvaro",
+  "BP Villaverde": "bp villaverde",
+  "BP Ángel González (Latina)": "bp angel gonzalez latina",
+  "Biblioteca Central de Leganés": "biblioteca central de leganes",
+  "Biblioteca Central de Móstoles": "biblioteca central de mostoles",
+  "Biblioteca Municipal Cardenal Cisneros (Alcalá de Henares)": "biblioteca municipal cardenal cisneros alcala de henares",
+  "Biblioteca Municipal Francisco Umbral (Majadahonda)": "biblioteca municipal francisco umbral majadahonda",
+  "Biblioteca Municipal Gloria Fuertes (Rivas)": "biblioteca municipal gloria fuertes rivas",
+  "Biblioteca Municipal José Ortega y Gasset": "biblioteca municipal jose ortega y gasset",
+  "Biblioteca Municipal León Tolstói (Las Rozas)": "biblioteca municipal leon tolstoi las rozas",
+  "Biblioteca Municipal Miguel de Cervantes (Pozuelo)": "biblioteca municipal miguel de cervantes pozuelo",
+  "Biblioteca Municipal Pedro Antonio de Alarcón": "biblioteca municipal pedro antonio de alarcon",
+  "Biblioteca Municipal Ricardo de la Vega (Getafe)": "biblioteca municipal ricardo de la vega getafe",
+  "Biblioteca Municipal de Alcorcón": "biblioteca municipal de alcorcon",
+  "Biblioteca Municipal de Loeches": "biblioteca municipal de loeches",
+  "Biblioteca Pública Central - Manuel Alvar": "biblioteca publica central manuel alvar",
+  "Biblioteca Pública José Acuña": "biblioteca publica jose acuna",
+  "Biblioteca Pública José Acuña (Moncloa)": "biblioteca publica jose acuna moncloa",
+  "Biblioteca Regional de Madrid Joaquín Leguina": "biblioteca regional de madrid joaquin leguina",
+  "CARABANCHEL. BP La Chata": "carabanchel bp la chata",
+  "CHAMARTÍN. BP Dámaso Alonso": "chamartin bp damaso alonso",
+  "Chamartín": "chamartin",
+  "FUENCARRAL-EL PARDO. BP José Saramago": "fuencarral el pardo bp jose saramago",
+  "HORTALEZA. BP Huerta de la Salud": "hortaleza bp huerta de la salud",
+  "José Luis Sampedro": "jose luis sampedro",
+  "LATINA. BP Aluche": "latina bp aluche",
+  "MONCLOA-ARAVACA. BP Acuña": "moncloa aravaca bp acuna",
+  "Mediatecas de Alcobendas": "mediatecas de alcobendas",
+  "RETIRO. BP Eugenio Trías": "retiro bp eugenio trias",
+  "Retiro": "retiro",
+  "SALAMANCA. BP Manuel Alvar": "salamanca bp manuel alvar",
+  "SAN BLAS. BP Canillejas": "san blas bp canillejas",
+  "Sucursal desconocida XYZ": "sucursal desconocida xyz",
+  "USERA. BP Gabriel García Márquez": "usera bp gabriel garcia marquez",
+  "eugenio_trias": "eugenio trias",
+  "jose_acuna": "jose acuna",
+  "Ñandú-Ça, va!": "nandu ca va",
+  "  A  b  ": "a b"
+ },
+ "find_library_geo": {
+  "": null,
+  "BP Aluche (Latina)": "aluche",
+  "BP Ana María Matute (Carabanchel)": "ana_maria_matute",
+  "BP Antonio Machado (Ciudad Lineal)": "antonio_machado",
+  "BP Antonio Mingote (Latina)": "antonio_mingote",
+  "BP Benjamín Palencia (Villa de Vallecas)": "vallecas",
+  "BP Canillejas (San Blas)": "canillejas",
+  "BP Ciudad Lineal": "ciudad_lineal",
+  "BP Conde Duque (Centro)": "conde_duque",
+  "BP David Gistau (Salamanca)": "david_gistau",
+  "BP Dámaso Alonso (Chamartín)": "damaso_alonso",
+  "BP Elena Fortún (Retiro)": "elena_fortun",
+  "BP Eugenio Trías (Retiro)": "eugenio_trias",
+  "BP Francisco Ibáñez (Chamartín)": "chamartin_francisco_ibanez",
+  "BP Francisco Umbral (Villaverde)": "villaverde",
+  "BP Gabriel García Márquez (Usera)": "gabriel_garcia_marquez",
+  "BP Gerardo Diego (Villa de Vallecas)": "vallecas",
+  "BP Gloria Fuertes (Barajas)": "gloria_fuertes",
+  "BP Hortaleza": "hortaleza",
+  "BP Huerta de la Salud (Hortaleza)": "huerta_de_la_salud",
+  "BP Iván de Vargas (Centro)": "ivan_de_vargas",
+  "BP Javier Marías (Moratalaz)": "moratalaz",
+  "BP José Hierro (Usera)": "jose_hierro",
+  "BP José Luis Sampedro (Chamberí)": "jose_luis_sampedro",
+  "BP José Saramago (Fuencarral)": "jose_saramago",
+  "BP La Chata (Carabanchel)": "la_chata",
+  "BP La Elipa (Ciudad Lineal)": "ciudad_lineal",
+  "BP Luis Martín-Santos (Villa de Vallecas)": "luis_martin_santos",
+  "BP Luis Rosales (Carabanchel)": "luis_rosales",
+  "BP Manuel Vázquez Montalbán (Tetuán)": "manuel_vazquez_montalban",
+  "BP Mario Vargas Llosa (Centro)": "mario_vargas_llosa",
+  "BP María Lejárraga (Hortaleza)": "hortaleza",
+  "BP María Moliner (Villaverde)": "maria_moliner",
+  "BP María Zambrano (Tetuán)": "maria_zambrano",
+  "BP Miguel Delibes (Moratalaz)": "moratalaz",
+  "BP Miguel Hernández (Puente de Vallecas)": "miguel_hernandez",
+  "BP Moratalaz": "moratalaz",
+  "BP Pablo Neruda (Ciudad Lineal)": "ciudad_lineal",
+  "BP Paco Rabal (Puente de Vallecas)": "vallecas",
+  "BP Pedro Salinas (Centro)": "pedro_salinas",
+  "BP Portazgo (Puente de Vallecas)": "vallecas",
+  "BP Pío Baroja (Arganzuela)": "pio_baroja",
+  "BP Rafael Alberti (Fuencarral)": "fuencarral_rafael_alberti",
+  "BP Ruiz Egea (Chamberí)": "ruiz_egea",
+  "BP San Blas": "san_blas",
+  "BP San Fermín (Usera)": "san_fermin",
+  "BP Vallecas": "vallecas",
+  "BP Vicálvaro": "vicalvaro",
+  "BP Villaverde": "villaverde",
+  "BP Ángel González (Latina)": "angel_gonzalez",
+  "Biblioteca Central de Leganés": "leganes",
+  "Biblioteca Central de Móstoles": "mostoles",
+  "Biblioteca Municipal Cardenal Cisneros (Alcalá de Henares)": "alcala_cardenal_cisneros",
+  "Biblioteca Municipal Francisco Umbral (Majadahonda)": "majadahonda_umbral",
+  "Biblioteca Municipal Gloria Fuertes (Rivas)": "gloria_fuertes",
+  "Biblioteca Municipal José Ortega y Gasset": "ortega_y_gasset",
+  "Biblioteca Municipal León Tolstói (Las Rozas)": "las_rozas_tolstoi",
+  "Biblioteca Municipal Miguel de Cervantes (Pozuelo)": "pozuelo_cervantes",
+  "Biblioteca Municipal Pedro Antonio de Alarcón": "pedro_antonio_de_alarcon",
+  "Biblioteca Municipal Ricardo de la Vega (Getafe)": "getafe",
+  "Biblioteca Municipal de Alcorcón": "alcorcon",
+  "Biblioteca Municipal de Loeches": null,
+  "Biblioteca Pública Central - Manuel Alvar": "manuel_alvar",
+  "Biblioteca Pública José Acuña": "jose_acuna",
+  "Biblioteca Pública José Acuña (Moncloa)": "jose_acuna",
+  "Biblioteca Regional de Madrid Joaquín Leguina": "joaquin_leguina",
+  "CARABANCHEL. BP La Chata": "la_chata",
+  "CHAMARTÍN. BP Dámaso Alonso": "damaso_alonso",
+  "Chamartín": "chamartin_francisco_ibanez",
+  "FUENCARRAL-EL PARDO. BP José Saramago": "jose_saramago",
+  "HORTALEZA. BP Huerta de la Salud": "huerta_de_la_salud",
+  "José Luis Sampedro": "jose_luis_sampedro",
+  "LATINA. BP Aluche": "aluche",
+  "MONCLOA-ARAVACA. BP Acuña": "jose_acuna",
+  "Mediatecas de Alcobendas": "alcobendas",
+  "RETIRO. BP Eugenio Trías": "eugenio_trias",
+  "Retiro": "elena_fortun",
+  "SALAMANCA. BP Manuel Alvar": "manuel_alvar",
+  "SAN BLAS. BP Canillejas": "canillejas",
+  "Sucursal desconocida XYZ": null,
+  "USERA. BP Gabriel García Márquez": "gabriel_garcia_marquez",
+  "eugenio_trias": "eugenio_trias",
+  "jose_acuna": "jose_acuna"
+ },
+ "haversine": [
+  [
+   40.4158,
+   -3.6791,
+   40.4358,
+   -3.6667,
+   2.46
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3995,
+   -3.6934,
+   2.18
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4284,
+   -3.7175,
+   3.54
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3846,
+   -3.7663,
+   8.16
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4632,
+   -3.6766,
+   5.27
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4137,
+   -3.6738,
+   0.51
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4811,
+   -3.7058,
+   7.6
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3853,
+   -3.7077,
+   4.17
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4389,
+   -3.7072,
+   3.5
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4728,
+   -3.7075,
+   6.78
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3856,
+   -3.7439,
+   6.43
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3842,
+   -3.7481,
+   6.82
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3789,
+   -3.6192,
+   6.52
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3475,
+   -3.7121,
+   8.09
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3905,
+   -3.6528,
+   3.59
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4072,
+   -3.6496,
+   2.67
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4082,
+   -3.7118,
+   2.89
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4468,
+   -3.7088,
+   4.27
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3952,
+   -3.6685,
+   2.46
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3882,
+   -3.6622,
+   3.39
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3922,
+   -3.6585,
+   3.15
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3541,
+   -3.6987,
+   7.06
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4158,
+   -3.6791,
+   0.0
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4139,
+   -3.7107,
+   2.68
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4277,
+   -3.7108,
+   2.99
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4262,
+   -3.7001,
+   2.12
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3951,
+   -3.7198,
+   4.14
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3756,
+   -3.6972,
+   4.73
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4703,
+   -3.6521,
+   6.48
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4715,
+   -3.6542,
+   6.54
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4795,
+   -3.6475,
+   7.57
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3879,
+   -3.7547,
+   7.11
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3951,
+   -3.7548,
+   6.81
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4431,
+   -3.6125,
+   6.4
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4285,
+   -3.6182,
+   5.35
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4312,
+   -3.6481,
+   3.13
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4475,
+   -3.6515,
+   4.23
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4295,
+   -3.6385,
+   3.76
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4258,
+   -3.6558,
+   2.26
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4735,
+   -3.5816,
+   10.45
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4008,
+   -3.7002,
+   2.44
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4325,
+   -3.6738,
+   1.91
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4619,
+   -3.7022,
+   5.49
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4556,
+   -3.6998,
+   4.76
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3701,
+   -3.6938,
+   5.23
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4542,
+   -3.6761,
+   4.28
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4042,
+   -3.6068,
+   6.26
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4095,
+   -3.6452,
+   2.95
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4055,
+   -3.6482,
+   2.86
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3755,
+   -3.6185,
+   6.81
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3822,
+   -3.6212,
+   6.16
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3425,
+   -3.7085,
+   8.52
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4045,
+   -3.8765,
+   16.76
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.6385,
+   -4.0135,
+   37.58
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4828,
+   -3.3644,
+   27.65
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.5367,
+   -3.6382,
+   13.88
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3478,
+   -3.8291,
+   14.79
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3065,
+   -3.7312,
+   12.93
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3282,
+   -3.7654,
+   12.18
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3225,
+   -3.8647,
+   18.84
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4412,
+   -3.8152,
+   11.86
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4725,
+   -3.8715,
+   17.46
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.4935,
+   -3.8745,
+   18.65
+  ],
+  [
+   40.4158,
+   -3.6791,
+   40.3542,
+   -3.5385,
+   13.74
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4358,
+   -3.6667,
+   0.0
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3995,
+   -3.6934,
+   4.63
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4284,
+   -3.7175,
+   4.38
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3846,
+   -3.7663,
+   10.17
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4632,
+   -3.6766,
+   3.16
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4137,
+   -3.6738,
+   2.53
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4811,
+   -3.7058,
+   6.03
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3853,
+   -3.7077,
+   6.6
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4389,
+   -3.7072,
+   3.44
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4728,
+   -3.7075,
+   5.37
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3856,
+   -3.7439,
+   8.6
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3842,
+   -3.7481,
+   8.97
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3789,
+   -3.6192,
+   7.5
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3475,
+   -3.7121,
+   10.54
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3905,
+   -3.6528,
+   5.17
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4072,
+   -3.6496,
+   3.49
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4082,
+   -3.7118,
+   4.9
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4468,
+   -3.7088,
+   3.77
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3952,
+   -3.6685,
+   4.52
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3882,
+   -3.6622,
+   5.31
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3922,
+   -3.6585,
+   4.9
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3541,
+   -3.6987,
+   9.48
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4158,
+   -3.6791,
+   2.46
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4139,
+   -3.7107,
+   4.45
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4277,
+   -3.7108,
+   3.84
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4262,
+   -3.7001,
+   3.02
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3951,
+   -3.7198,
+   6.38
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3756,
+   -3.6972,
+   7.17
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4703,
+   -3.6521,
+   4.03
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4715,
+   -3.6542,
+   4.11
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4795,
+   -3.6475,
+   5.12
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3879,
+   -3.7547,
+   9.16
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3951,
+   -3.7548,
+   8.72
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4431,
+   -3.6125,
+   4.66
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4285,
+   -3.6182,
+   4.18
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4312,
+   -3.6481,
+   1.66
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4475,
+   -3.6515,
+   1.83
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4295,
+   -3.6385,
+   2.49
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4258,
+   -3.6558,
+   1.44
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4735,
+   -3.5816,
+   8.33
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4008,
+   -3.7002,
+   4.82
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4325,
+   -3.6738,
+   0.7
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4619,
+   -3.7022,
+   4.18
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4556,
+   -3.6998,
+   3.56
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3701,
+   -3.6938,
+   7.66
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4542,
+   -3.6761,
+   2.2
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4042,
+   -3.6068,
+   6.17
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4095,
+   -3.6452,
+   3.44
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4055,
+   -3.6482,
+   3.72
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3755,
+   -3.6185,
+   7.85
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3822,
+   -3.6212,
+   7.1
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3425,
+   -3.7085,
+   10.96
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4045,
+   -3.8765,
+   18.1
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.6385,
+   -4.0135,
+   36.97
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4828,
+   -3.3644,
+   26.1
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.5367,
+   -3.6382,
+   11.48
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3478,
+   -3.8291,
+   16.88
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3065,
+   -3.7312,
+   15.38
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3282,
+   -3.7654,
+   14.6
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3225,
+   -3.8647,
+   20.98
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4412,
+   -3.8152,
+   12.58
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4725,
+   -3.8715,
+   17.8
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.4935,
+   -3.8745,
+   18.71
+  ],
+  [
+   40.4358,
+   -3.6667,
+   40.3542,
+   -3.5385,
+   14.15
+  ],
+  [
+   40.4168,
+   -3.7038,
+   40.4158,
+   -3.6791,
+   2.09
+  ]
+ ],
+ "clean_title": {
+  "Dune (Dune Chronicles, #1)": "Dune",
+  "The Fellowship of the Ring (The Lord of the Rings, #1)": "The Fellowship of the Ring",
+  "Harry Potter and the Sorcerer's Stone (Harry Potter, #1)": "Harry Potter and the Sorcerer's Stone",
+  "Watchmen [Graphic Novel]": "Watchmen",
+  "1984 (Signet Classics)": "1984",
+  "Cien años de soledad (Edición 50 Aniversario)": "Cien años de soledad",
+  "Sapiens: A Brief History of Humankind": "Sapiens",
+  "El infinito en un junco: La invención de los libros en el mundo antiguo": "El infinito en un junco",
+  "For Love of Country: Common Sense 2.0": "For Love of Country",
+  "It: A Novel": "It A Novel",
+  "Ab: cd": "Ab cd",
+  "  ": "",
+  "": "",
+  "¿Quién se ha llevado mi queso? (Spanish Edition)": "¿Quién se ha llevado mi queso?",
+  "Los renglones torcidos de Dios (Booket)": "Los renglones torcidos de Dios",
+  "Rayuela (Cátedra)": "Rayuela",
+  "La sombra del viento (El Cementerio de los Libros Olvidados, #1)": "La sombra del viento",
+  "Ñandú & Co. — «edición» ½": "Ñandú Co. edición ½",
+  "Tokyo Blues (Norwegian Wood)": "Tokyo Blues",
+  "A/B: C": "A B",
+  "Niebla (Clásicos)": "Niebla"
+ },
+ "user_id": {
+  "177587843": "177587843",
+  " 177587843 ": "177587843",
+  "https://www.goodreads.com/user/show/177587843-john-doe": "177587843",
+  "https://www.goodreads.com/user/show/99887766": "99887766",
+  "https://www.goodreads.com/review/list/12345678?shelf=to-read": "12345678",
+  "https://www.goodreads.com/review/list_rss/12345678": "12345678",
+  "my id is 1234567 ok": "1234567",
+  "abc": "abc",
+  "": "",
+  "1234": "1234"
+ },
+ "user_name": [
+  [
+   "https://www.goodreads.com/user/show/155193797-javier-bermejo",
+   null,
+   "Javier Bermejo"
+  ],
+  [
+   "https://www.goodreads.com/user/show/177587843-john-doe_smith",
+   null,
+   "John Doe Smith"
+  ],
+  [
+   "177587843",
+   "Javier Bermejo's bookshelf: to-read",
+   "Javier Bermejo"
+  ],
+  [
+   "177587843",
+   "Ana García’s bookshelf: currently-reading",
+   "Ana García"
+  ],
+  [
+   "177587843",
+   "12345's bookshelf: read",
+   null
+  ],
+  [
+   "https://www.goodreads.com/user/show/1-ana-lopez?ref=nav/x",
+   "12345's bookshelf: read",
+   "Ana Lopez"
+  ],
+  [
+   "177587843",
+   "Goodreads: to-read",
+   null
+  ],
+  [
+   "",
+   null,
+   null
+  ]
+ ],
+ "rss_live": {
+  "user_name": "Jonathan",
+  "books": [
+   {
+    "book_id": "205951357",
+    "title": "For Love of Country: Common Sense 2.0",
+    "clean_title": "For Love of Country",
+    "author": "Norman W. Holden",
+    "isbn": "1736220365",
+    "cover_image_url": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1706184524l/205951357._SY475_.jpg",
+    "user_rating": 0,
+    "user_shelves": "to-read",
+    "date_added": "Sun, 21 Apr 2024 17:10:24 -0700",
+    "link": "https://www.goodreads.com/review/show/6446562781?utm_medium=api&utm_source=rss"
+   }
+  ]
+ },
+ "rss_synthetic": {
+  "user_name": "Ana García",
+  "books": [
+   {
+    "book_id": "44767458",
+    "title": "Dune (Dune Chronicles, #1)",
+    "clean_title": "Dune",
+    "author": "Frank Herbert",
+    "isbn": "0441172717",
+    "cover_image_url": "https://i.gr-assets.com/images/S/dune._SY475_.jpg",
+    "user_rating": 5,
+    "user_shelves": "currently-reading, sci-fi",
+    "date_added": "Mon, 01 Jan 2024 10:00:00 -0800",
+    "link": "https://www.goodreads.com/review/show/1"
+   },
+   {
+    "book_id": "320",
+    "title": "Cien años de soledad (Edición 50 Aniversario)",
+    "clean_title": "Cien años de soledad",
+    "author": "Gabriel García Márquez",
+    "isbn": "9788497592208",
+    "cover_image_url": null,
+    "user_rating": 0,
+    "user_shelves": null,
+    "date_added": "Tue, 02 Jan 2024 10:00:00 -0800",
+    "link": "https://www.goodreads.com/review/show/2"
+   },
+   {
+    "book_id": "https://www.goodreads.com/review/show/3",
+    "title": "El infinito en un junco: La invención de los libros en el mundo antiguo",
+    "clean_title": "El infinito en un junco",
+    "author": "Irene Vallejo",
+    "isbn": null,
+    "cover_image_url": "",
+    "user_rating": 0,
+    "user_shelves": null,
+    "date_added": "Wed, 03 Jan 2024 10:00:00 -0800",
+    "link": null
+   },
+   {
+    "book_id": "gr_4",
+    "title": "Watchmen [Graphic Novel] (Absolute Edition)",
+    "clean_title": "Watchmen",
+    "author": "Alan Moore",
+    "isbn": null,
+    "cover_image_url": "",
+    "user_rating": 3,
+    "user_shelves": null,
+    "date_added": "",
+    "link": null
+   },
+   {
+    "book_id": "999",
+    "title": "¿Quién se ha llevado mi queso? (Spanish Edition)",
+    "clean_title": "¿Quién se ha llevado mi queso?",
+    "author": "Spencer Johnson",
+    "isbn": null,
+    "cover_image_url": "",
+    "user_rating": 0,
+    "user_shelves": null,
+    "date_added": "",
+    "link": null
+   }
+  ]
+ },
+ "list_pages": {
+  "opac_list_cien_anos.html": [
+   [
+    {
+     "title": "Cien años de soledad / Gabriel García Márquez",
+     "author": "García Márquez, Gabriel (1927-2014)",
+     "publication": "Lugar / ed. / año: Barcelona : Random House, 2024"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=1"
+   ],
+   [
+    {
+     "title": "Cien años de soledad / Gabriel García Márquez",
+     "author": "García Márquez, Gabriel (1927-2014)",
+     "publication": "Lugar / ed. / año: Barcelona : Random House, 2024"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=2"
+   ],
+   [
+    {
+     "title": "El secreto de los Buendía : sobre cien años de soledad / Sultana Wahnón",
+     "author": "Wahnón Bensusan, Sultana (1960-)",
+     "publication": "Lugar / ed. / año: (Publicación) Barcelona : Gedisa editorial, [2021]"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=3"
+   ],
+   [
+    {
+     "title": "Cien años de soledad / Gabriel García Márquez ; ilustrado por Luisa Rivera",
+     "author": "García Márquez, Gabriel (1927-2014)",
+     "publication": "Lugar / ed. / año: Barcelona : Random House, 2017"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=4"
+   ],
+   [
+    {
+     "title": "Cien años de soledad / Gabriel García Márquez ; edición de Jacques Joset",
+     "author": "García Márquez, Gabriel (1927-2014)",
+     "publication": "Lugar / ed. / año: Madrid : Cátedra, 2017"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=5"
+   ],
+   [
+    {
+     "title": "Cien años de soledad / Gabriel García Márquez",
+     "author": "García Márquez, Gabriel (1927-2014)",
+     "publication": "Lugar / ed. / año: Barcelona : Literatura Random House, D.L. 2015"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=6"
+   ],
+   [
+    {
+     "title": "Cien años de soledad / Gabriel García Márquez",
+     "author": "García Márquez, Gabriel (1927-2014)",
+     "publication": "Lugar / ed. / año: Barcelona : Círculo de lectores, [2014]"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=7"
+   ],
+   [
+    {
+     "title": "Cien años de soledad / Gabriel García Márquez",
+     "author": "García Márquez, Gabriel (1927-2014)",
+     "publication": "Lugar / ed. / año: [Barcelona] : Literatura Random House, 2014"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=8"
+   ],
+   [
+    {
+     "title": "Cien años de soledad / Gabriel García Márquez ; texto revisado por el autor para esta edición",
+     "author": "García Márquez, Gabriel (1927-2014)",
+     "publication": "Lugar / ed. / año: Madrid : Real Academia Española : Asociación de Academias de la Lengua Española : Santillana, [2007]"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=9"
+   ],
+   [
+    {
+     "title": "Cien años de soledad / Gabriel García Márquez",
+     "author": "García Márquez, Gabriel (1927-2014)",
+     "publication": "Lugar / ed. / año: Barcelona : Mondadori, [2007]"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=10"
+   ]
+  ],
+  "opac_author_rowling.html": [
+   [
+    {
+     "title": "Pocket Potters : guías de las historias de Harry Potter de J.K. Rowling. Profesor Dumbledore / J.K. Rowling ; ilustrado por Paola Escobar",
+     "author": "Rowling, J. K. (1965-)",
+     "publication": "Lugar / ed. / año: Barcelona : Salamandra, 2026"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=1"
+   ],
+   [
+    {
+     "title": "Luna Lovegood / J.K Rowling; ilustrado por Helen Brady; [traducción, Alicia Astorza Ligero]",
+     "author": "Rowling, J. K. (1965-)",
+     "publication": "Lugar / ed. / año: Barcelona : Salamandra infantil y juvenil, 2026"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=2"
+   ],
+   [
+    {
+     "title": "Pocket Potters : guías de las historias de Harry Potter de J.K. Rowling: Harry Potter / J.K. Rowling ; ilustrado por Natalie Smillie",
+     "author": "Rowling, J. K. (1965-)",
+     "publication": "Lugar / ed. / año: Barcelona : Salamandra, 2025"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=3"
+   ],
+   [
+    {
+     "title": "Pocket Potters: guías de las historias de Harry Potter de J.K. Rowling: Harry Potter : Hermione Granger / J. K. Rowling ; ilustrado por Laura Proietti",
+     "author": "Rowling, J. K. (1965-)",
+     "publication": "Lugar / ed. / año: Barcelona : Salamandra, 2025"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=4"
+   ],
+   [
+    {
+     "title": "Harry Potter y el prisionero de Azkaban / J. K. Rowling ; traducción del inglés de Adolfo Muñoz García y Nieves Martín Azofra ; [ilustraciones, Xavier Bonet]",
+     "author": "Rowling, J. K. (1965-)",
+     "publication": "Lugar / ed. / año: Barcelona : Salamandra, 2025"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=5"
+   ],
+   [
+    {
+     "title": "Harry Potter y el cáliz de fuego / J. K. Rowling ; traducción del inglés de Adolfo Muñoz García y Nieves Martín Azofra ; [ilustraciones, Xavier Bonet]",
+     "author": "Rowling, J. K. (1965-)",
+     "publication": "Lugar / ed. / año: Barcelona : Salamandra, 2025"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=6"
+   ],
+   [
+    {
+     "title": "Ron Weasley / J. K. Rowling ; ilustraciones de Olia Muza",
+     "author": "Rowling, J. K. (1965-)",
+     "publication": "Lugar / ed. / año: Barcelona : Salamandra, 2025"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=7"
+   ],
+   [
+    {
+     "title": "Harry Potter y la Orden del Fénix / J.K Rowling ; traducción del inglés de Gemma Rovira Ortega ; [ilustraciones, Xavier Bonet]",
+     "author": "Rowling, J. K. (1965-)",
+     "publication": "Lugar / ed. / año: Barcelona : Salamandra, 2025"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=8"
+   ],
+   [
+    {
+     "title": "El Ickabog / J.K. Rowling ; ilustraciones de Ben Mantle.",
+     "author": "Rowling, J. K. (1965-)",
+     "publication": "Lugar / ed. / año: Barcelona : Salamandra, 2025."
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=9"
+   ],
+   [
+    {
+     "title": "Harry Potter y el cáliz del fuego / J.K. Rowling ; ilustraciones de Karl James Mountford ; ingeniería del papel de Jess Tice-Gilbert",
+     "author": "Rowling, J. K. (1965-)",
+     "publication": "Lugar / ed. / año: Barcelona : Salamandra, 2025"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=10"
+   ]
+  ],
+  "opac_single_result.html": [
+   [
+    {
+     "title": "El infinito en un junco / adaptación e ilustraciones, Tyto Alba ; [texto original] Irene Vallejo ; guión, Xisca Mas",
+     "author": "Alba, Tyto (1975-)",
+     "publication": "Lugar / ed. / año: Barcelona : Debate, 2024"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=1"
+   ],
+   [
+    {
+     "title": "El infinito en un junco : edición gráfica / [adaptación del texto y las ilustraciones] Tyto Alba ; [texto original] Irene Vallejo",
+     "author": "Alba, Tyto (1975-)",
+     "publication": "Lugar / ed. / año: Barcelona : Debate, 2023"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=2"
+   ],
+   [
+    {
+     "title": "El infinito en un junco : la invención de los libros en el mundo antiguo / Irene Vallejo",
+     "author": "Vallejo Moreu, Irene (1979-)",
+     "publication": "Lugar / ed. / año: (Publicación) [Barcelona] : Debolsillo, [2022]"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=3"
+   ],
+   [
+    {
+     "title": "Papyrus, l'infinito in un giunco : la grande aventura del libro nel mondo antico / Irene Vallejo; traduzione dallo spanolo di Monica R. Bedana",
+     "author": "Vallejo Moreu, Irene (1979-)",
+     "publication": "Lugar / ed. / año: (Publicación) Firenze ; Milano : Bompiani, 2021"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=4"
+   ],
+   [
+    {
+     "title": "El infinito en un junco : la invención de los libros en el mundo antiguo / Irene Vallejo",
+     "author": "Vallejo Moreu, Irene (1979-)",
+     "publication": "Lugar / ed. / año: (Publicación) Madrid : Siruela, [2020] (Copyright) ©2020"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=5"
+   ],
+   [
+    {
+     "title": "El infinito en un junco : la invención de los libros en el mundo antiguo / Irene Vallejo",
+     "author": "Vallejo Moreu, Irene (1979-)",
+     "publication": "Lugar / ed. / año: Madrid : Siruela, [2019]"
+    },
+    "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=165&DOC=6"
+   ]
+  ]
+ },
+ "list_base_url": "https://gestiona.comunidad.madrid/biblio_publicas/cgi-bin/abnetopac/TOKEN?ACC=120&FORM=2",
+ "detail_live": {
+  "doc_id": null,
+  "title": "Cien años de soledad / Gabriel García Márquez",
+  "author": "García Márquez , Gabriel (1927-2014)",
+  "publication": "Random House,",
+  "year": "2024",
+  "edition": "1ª ed.",
+  "isbn": "978-84-663-7353-1",
+  "description": "El libro narra la historia de la familia Buendía a lo largo de siete generaciones en el pueblo ficticio de Macondo. La magia se alcanza con los recursos de la\nexpresión poética en la que el lector se identifica con los comportamientos y las actitudes de sus personajes.",
+  "detail_url": "DOC_URL",
+  "total_copies": 10,
+  "available_copies": 5,
+  "holdings": [
+   {
+    "library": "Biblioteca Municipal José Ortega y Gasset",
+    "location": "Sala adultos",
+    "shelfmark": "N GAR cie",
+    "barcode": "1501434607",
+    "item_type": "Prestable. Libros",
+    "support": "Libro",
+    "status_raw": "Disponible",
+    "is_available": true,
+    "due_date": null,
+    "lat": 40.4045,
+    "lon": -3.8765,
+    "district": "Boadilla del Monte",
+    "municipality": "Boadilla del Monte",
+    "distance_km": null,
+    "relative_to_library": null,
+    "is_direct_match": false
+   },
+   {
+    "library": "José Luis Sampedro",
+    "location": "Sala adultos",
+    "shelfmark": "N GAR cie",
+    "barcode": "161498",
+    "item_type": "Prestable. Libros",
+    "support": "Libro",
+    "status_raw": "Prestado (hasta 12/11/2026)",
+    "is_available": false,
+    "due_date": "12/11/2026",
+    "lat": 40.4389,
+    "lon": -3.7072,
+    "district": "Chamberí",
+    "municipality": "Madrid",
+    "distance_km": null,
+    "relative_to_library": null,
+    "is_direct_match": false
+   },
+   {
+    "library": "Biblioteca Municipal de Loeches",
+    "location": "Sala adultos Novedad",
+    "shelfmark": "N GAR cie",
+    "barcode": "1501726484",
+    "item_type": "Prestable. Libros",
+    "support": "Libro",
+    "status_raw": "Disponible",
+    "is_available": true,
+    "due_date": null,
+    "lat": null,
+    "lon": null,
+    "district": null,
+    "municipality": null,
+    "distance_km": null,
+    "relative_to_library": null,
+    "is_direct_match": false
+   },
+   {
+    "library": "CHAMARTÍN. BP Dámaso Alonso",
+    "location": "Depósito",
+    "shelfmark": "N GAR cie",
+    "barcode": "1402046221",
+    "item_type": "Prestable. Libros",
+    "support": "Libro",
+    "status_raw": "Disponible",
+    "is_available": true,
+    "due_date": null,
+    "lat": 40.4632,
+    "lon": -3.6766,
+    "district": "Chamartín",
+    "municipality": "Madrid",
+    "distance_km": null,
+    "relative_to_library": null,
+    "is_direct_match": false
+   },
+   {
+    "library": "FUENCARRAL-EL PARDO. BP José Saramago",
+    "location": "Sala adultos",
+    "shelfmark": "N GAR cie",
+    "barcode": "1402046225",
+    "item_type": "Prestable. Libros",
+    "support": "Libro",
+    "status_raw": "Prestado (hasta 10/11/2026)",
+    "is_available": false,
+    "due_date": "10/11/2026",
+    "lat": 40.4728,
+    "lon": -3.7075,
+    "district": "Fuencarral-El Pardo",
+    "municipality": "Madrid",
+    "distance_km": null,
+    "relative_to_library": null,
+    "is_direct_match": false
+   },
+   {
+    "library": "HORTALEZA. BP Huerta de la Salud",
+    "location": "Sala adultos",
+    "shelfmark": "N GAR cie",
+    "barcode": "1402046220",
+    "item_type": "Prestable. Libros",
+    "support": "Libro",
+    "status_raw": "Disponible",
+    "is_available": true,
+    "due_date": null,
+    "lat": 40.4703,
+    "lon": -3.6521,
+    "district": "Hortaleza",
+    "municipality": "Madrid",
+    "distance_km": null,
+    "relative_to_library": null,
+    "is_direct_match": false
+   },
+   {
+    "library": "LATINA. BP Aluche",
+    "location": "Sala adultos",
+    "shelfmark": "N GAR cie",
+    "barcode": "1402046227",
+    "item_type": "Prestable. Libros",
+    "support": "Libro",
+    "status_raw": "Prestado (hasta 23/10/2026)",
+    "is_available": false,
+    "due_date": "23/10/2026",
+    "lat": 40.3879,
+    "lon": -3.7547,
+    "district": "Latina",
+    "municipality": "Madrid",
+    "distance_km": null,
+    "relative_to_library": null,
+    "is_direct_match": false
+   },
+   {
+    "library": "SAN BLAS. BP Canillejas",
+    "location": "Depósito",
+    "shelfmark": "N GAR cie",
+    "barcode": "1401293764",
+    "item_type": "Prestable. Libros",
+    "support": "Libro",
+    "status_raw": "No disponible Nº de reservas: 1",
+    "is_available": false,
+    "due_date": null,
+    "lat": 40.4431,
+    "lon": -3.6125,
+    "district": "San Blas-Canillejas",
+    "municipality": "Madrid",
+    "distance_km": null,
+    "relative_to_library": null,
+    "is_direct_match": false
+   },
+   {
+    "library": "USERA. BP Gabriel García Márquez",
+    "location": "Sala adultos",
+    "shelfmark": "N GAR cie",
+    "barcode": "1402046228",
+    "item_type": "Prestable. Libros",
+    "support": "Libro",
+    "status_raw": "Disponible",
+    "is_available": true,
+    "due_date": null,
+    "lat": 40.3756,
+    "lon": -3.6972,
+    "district": "Usera",
+    "municipality": "Madrid",
+    "distance_km": null,
+    "relative_to_library": null,
+    "is_direct_match": false
+   },
+   {
+    "library": "Biblioteca Municipal Pedro Antonio de Alarcón",
+    "location": "Sala adultos",
+    "shelfmark": "N GAR cie",
+    "barcode": "1501402733",
+    "item_type": "Prestable. Libros",
+    "support": "Libro",
+    "status_raw": "Prestado (hasta 04/11/2026)",
+    "is_available": false,
+    "due_date": "04/11/2026",
+    "lat": 40.6385,
+    "lon": -4.0135,
+    "district": "San Lorenzo de El Escorial",
+    "municipality": "San Lorenzo de El Escorial",
+    "distance_km": null,
+    "relative_to_library": null,
+    "is_direct_match": false
+   }
+  ],
+  "direct_matches": [],
+  "nearby_matches": [],
+  "other_holdings": []
+ },
+ "detail_sample": {
+  "doc_id": null,
+  "title": "Cien años de soledad / Gabriel García Márquez",
+  "author": "García Márquez, Gabriel (1927-2014)",
+  "publication": "Barcelona : Random House, 2024",
+  "year": "2024",
+  "edition": null,
+  "isbn": "978-84-663-7353-1",
+  "description": null,
+  "detail_url": "http://example.com/doc1",
+  "total_copies": 2,
+  "available_copies": 1,
+  "holdings": [
+   {
+    "library": "CARABANCHEL. BP La Chata",
+    "location": "Sala adultos",
+    "shelfmark": "N GAR cie",
+    "barcode": "1402046226",
+    "item_type": "Prestable. Libros",
+    "support": "Libro",
+    "status_raw": "Disponible",
+    "is_available": true,
+    "due_date": null,
+    "lat": 40.3856,
+    "lon": -3.7439,
+    "district": "Carabanchel",
+    "municipality": "Madrid",
+    "distance_km": null,
+    "relative_to_library": null,
+    "is_direct_match": false
+   },
+   {
+    "library": "CHAMARTÍN. BP Dámaso Alonso",
+    "location": "Depósito",
+    "shelfmark": "N GAR cie",
+    "barcode": "1402099999",
+    "item_type": "Prestable. Libros",
+    "support": "Libro",
+    "status_raw": "Prestado (hasta 15/09/2026)",
+    "is_available": false,
+    "due_date": "15/09/2026",
+    "lat": 40.4632,
+    "lon": -3.6766,
+    "district": "Chamartín",
+    "municipality": "Madrid",
+    "distance_km": null,
+    "relative_to_library": null,
+    "is_direct_match": false
+   }
+  ],
+  "direct_matches": [],
+  "nearby_matches": [],
+  "other_holdings": []
+ },
+ "sample_detail_html": "\n<!DOCTYPE html>\n<html>\n<head><title>Detalle</title></head>\n<body>\n  <dl>\n    <dt>Título:</dt><dd>Cien años de soledad / Gabriel García Márquez</dd>\n    <dt>Autor/Autora:</dt><dd>García Márquez, Gabriel (1927-2014)</dd>\n    <dt>Publicación:</dt><dd>Barcelona : Random House, 2024</dd>\n    <dt>Año:</dt><dd>2024</dd>\n    <dt>ISBN:</dt><dd>978-84-663-7353-1</dd>\n  </dl>\n\n  <div class=\"c-accordion_item\">\n    <button class=\"c-accordion_btn\">Sucursal: CARABANCHEL. BP La Chata</button>\n    <table>\n      <tr><th>Localización / Signatura</th><th>Tipo de ejemplar</th><th>Soporte</th><th>Disponibilidad</th></tr>\n      <tr>\n        <td>\n          <span class=\"icm_locSign\">Sala adultos</span>\n          <a class=\"js-evn-copiasDetail-indexSign\" data-bc=\"1402046226\" data-sign=\"N GAR cie\">N GAR cie</a>\n        </td>\n        <td>Prestable. Libros</td>\n        <td>Libro</td>\n        <td class=\"copias_tableDisp\">Disponible</td>\n      </tr>\n    </table>\n  </div>\n\n  <div class=\"c-accordion_item\">\n    <button class=\"c-accordion_btn\">Sucursal: CHAMARTÍN. BP Dámaso Alonso</button>\n    <table>\n      <tr><th>Localización / Signatura</th><th>Tipo de ejemplar</th><th>Soporte</th><th>Disponibilidad</th></tr>\n      <tr>\n        <td>\n          <span class=\"icm_locSign\">Depósito</span>\n          <a class=\"js-evn-copiasDetail-indexSign\" data-bc=\"1402099999\" data-sign=\"N GAR cie\">N GAR cie</a>\n        </td>\n        <td>Prestable. Libros</td>\n        <td>Libro</td>\n        <td class=\"copias_tableDisp\">Disponible después de 15/09/2026</td>\n      </tr>\n    </table>\n  </div>\n</body>\n</html>\n",
+ "grouping": [
+  {
+   "selected": [
+    "eugenio_trias"
+   ],
+   "radius_km": 5.0,
+   "direct": [],
+   "nearby": [
+    {
+     "library": "José Luis Sampedro",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "161498",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 12/11/2026)",
+     "is_available": false,
+     "due_date": "12/11/2026",
+     "lat": 40.4389,
+     "lon": -3.7072,
+     "district": "Chamberí",
+     "municipality": "Madrid",
+     "distance_km": 3.5,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "USERA. BP Gabriel García Márquez",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046228",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.3756,
+     "lon": -3.6972,
+     "district": "Usera",
+     "municipality": "Madrid",
+     "distance_km": 4.73,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    }
+   ],
+   "other": [
+    {
+     "library": "Biblioteca Municipal José Ortega y Gasset",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501434607",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4045,
+     "lon": -3.8765,
+     "district": "Boadilla del Monte",
+     "municipality": "Boadilla del Monte",
+     "distance_km": 16.76,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "Biblioteca Municipal de Loeches",
+     "location": "Sala adultos Novedad",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501726484",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": null,
+     "lon": null,
+     "district": null,
+     "municipality": null,
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "CHAMARTÍN. BP Dámaso Alonso",
+     "location": "Depósito",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046221",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4632,
+     "lon": -3.6766,
+     "district": "Chamartín",
+     "municipality": "Madrid",
+     "distance_km": 5.27,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "FUENCARRAL-EL PARDO. BP José Saramago",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046225",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 10/11/2026)",
+     "is_available": false,
+     "due_date": "10/11/2026",
+     "lat": 40.4728,
+     "lon": -3.7075,
+     "district": "Fuencarral-El Pardo",
+     "municipality": "Madrid",
+     "distance_km": 6.78,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "HORTALEZA. BP Huerta de la Salud",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046220",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4703,
+     "lon": -3.6521,
+     "district": "Hortaleza",
+     "municipality": "Madrid",
+     "distance_km": 6.48,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "LATINA. BP Aluche",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046227",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 23/10/2026)",
+     "is_available": false,
+     "due_date": "23/10/2026",
+     "lat": 40.3879,
+     "lon": -3.7547,
+     "district": "Latina",
+     "municipality": "Madrid",
+     "distance_km": 7.11,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "SAN BLAS. BP Canillejas",
+     "location": "Depósito",
+     "shelfmark": "N GAR cie",
+     "barcode": "1401293764",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "No disponible Nº de reservas: 1",
+     "is_available": false,
+     "due_date": null,
+     "lat": 40.4431,
+     "lon": -3.6125,
+     "district": "San Blas-Canillejas",
+     "municipality": "Madrid",
+     "distance_km": 6.4,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "Biblioteca Municipal Pedro Antonio de Alarcón",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501402733",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 04/11/2026)",
+     "is_available": false,
+     "due_date": "04/11/2026",
+     "lat": 40.6385,
+     "lon": -4.0135,
+     "district": "San Lorenzo de El Escorial",
+     "municipality": "San Lorenzo de El Escorial",
+     "distance_km": 37.58,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    }
+   ]
+  },
+  {
+   "selected": [
+    "eugenio_trias"
+   ],
+   "radius_km": 1.0,
+   "direct": [],
+   "nearby": [],
+   "other": [
+    {
+     "library": "Biblioteca Municipal José Ortega y Gasset",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501434607",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4045,
+     "lon": -3.8765,
+     "district": "Boadilla del Monte",
+     "municipality": "Boadilla del Monte",
+     "distance_km": 16.76,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "José Luis Sampedro",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "161498",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 12/11/2026)",
+     "is_available": false,
+     "due_date": "12/11/2026",
+     "lat": 40.4389,
+     "lon": -3.7072,
+     "district": "Chamberí",
+     "municipality": "Madrid",
+     "distance_km": 3.5,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "Biblioteca Municipal de Loeches",
+     "location": "Sala adultos Novedad",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501726484",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": null,
+     "lon": null,
+     "district": null,
+     "municipality": null,
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "CHAMARTÍN. BP Dámaso Alonso",
+     "location": "Depósito",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046221",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4632,
+     "lon": -3.6766,
+     "district": "Chamartín",
+     "municipality": "Madrid",
+     "distance_km": 5.27,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "FUENCARRAL-EL PARDO. BP José Saramago",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046225",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 10/11/2026)",
+     "is_available": false,
+     "due_date": "10/11/2026",
+     "lat": 40.4728,
+     "lon": -3.7075,
+     "district": "Fuencarral-El Pardo",
+     "municipality": "Madrid",
+     "distance_km": 6.78,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "HORTALEZA. BP Huerta de la Salud",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046220",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4703,
+     "lon": -3.6521,
+     "district": "Hortaleza",
+     "municipality": "Madrid",
+     "distance_km": 6.48,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "LATINA. BP Aluche",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046227",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 23/10/2026)",
+     "is_available": false,
+     "due_date": "23/10/2026",
+     "lat": 40.3879,
+     "lon": -3.7547,
+     "district": "Latina",
+     "municipality": "Madrid",
+     "distance_km": 7.11,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "SAN BLAS. BP Canillejas",
+     "location": "Depósito",
+     "shelfmark": "N GAR cie",
+     "barcode": "1401293764",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "No disponible Nº de reservas: 1",
+     "is_available": false,
+     "due_date": null,
+     "lat": 40.4431,
+     "lon": -3.6125,
+     "district": "San Blas-Canillejas",
+     "municipality": "Madrid",
+     "distance_km": 6.4,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "USERA. BP Gabriel García Márquez",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046228",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.3756,
+     "lon": -3.6972,
+     "district": "Usera",
+     "municipality": "Madrid",
+     "distance_km": 4.73,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "Biblioteca Municipal Pedro Antonio de Alarcón",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501402733",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 04/11/2026)",
+     "is_available": false,
+     "due_date": "04/11/2026",
+     "lat": 40.6385,
+     "lon": -4.0135,
+     "district": "San Lorenzo de El Escorial",
+     "municipality": "San Lorenzo de El Escorial",
+     "distance_km": 37.58,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    }
+   ]
+  },
+  {
+   "selected": [
+    "eugenio_trias",
+    "jose_acuna"
+   ],
+   "radius_km": 3.0,
+   "direct": [],
+   "nearby": [
+    {
+     "library": "José Luis Sampedro",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "161498",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 12/11/2026)",
+     "is_available": false,
+     "due_date": "12/11/2026",
+     "lat": 40.4389,
+     "lon": -3.7072,
+     "district": "Chamberí",
+     "municipality": "Madrid",
+     "distance_km": 1.46,
+     "relative_to_library": "Biblioteca Pública José Acuña (Moncloa)",
+     "is_direct_match": false
+    }
+   ],
+   "other": [
+    {
+     "library": "Biblioteca Municipal José Ortega y Gasset",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501434607",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4045,
+     "lon": -3.8765,
+     "district": "Boadilla del Monte",
+     "municipality": "Boadilla del Monte",
+     "distance_km": 13.72,
+     "relative_to_library": "Biblioteca Pública José Acuña (Moncloa)",
+     "is_direct_match": false
+    },
+    {
+     "library": "Biblioteca Municipal de Loeches",
+     "location": "Sala adultos Novedad",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501726484",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": null,
+     "lon": null,
+     "district": null,
+     "municipality": null,
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "CHAMARTÍN. BP Dámaso Alonso",
+     "location": "Depósito",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046221",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4632,
+     "lon": -3.6766,
+     "district": "Chamartín",
+     "municipality": "Madrid",
+     "distance_km": 5.19,
+     "relative_to_library": "Biblioteca Pública José Acuña (Moncloa)",
+     "is_direct_match": false
+    },
+    {
+     "library": "FUENCARRAL-EL PARDO. BP José Saramago",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046225",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 10/11/2026)",
+     "is_available": false,
+     "due_date": "10/11/2026",
+     "lat": 40.4728,
+     "lon": -3.7075,
+     "district": "Fuencarral-El Pardo",
+     "municipality": "Madrid",
+     "distance_km": 5.01,
+     "relative_to_library": "Biblioteca Pública José Acuña (Moncloa)",
+     "is_direct_match": false
+    },
+    {
+     "library": "HORTALEZA. BP Huerta de la Salud",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046220",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4703,
+     "lon": -3.6521,
+     "district": "Hortaleza",
+     "municipality": "Madrid",
+     "distance_km": 6.48,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "LATINA. BP Aluche",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046227",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 23/10/2026)",
+     "is_available": false,
+     "due_date": "23/10/2026",
+     "lat": 40.3879,
+     "lon": -3.7547,
+     "district": "Latina",
+     "municipality": "Madrid",
+     "distance_km": 5.5,
+     "relative_to_library": "Biblioteca Pública José Acuña (Moncloa)",
+     "is_direct_match": false
+    },
+    {
+     "library": "SAN BLAS. BP Canillejas",
+     "location": "Depósito",
+     "shelfmark": "N GAR cie",
+     "barcode": "1401293764",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "No disponible Nº de reservas: 1",
+     "is_available": false,
+     "due_date": null,
+     "lat": 40.4431,
+     "lon": -3.6125,
+     "district": "San Blas-Canillejas",
+     "municipality": "Madrid",
+     "distance_km": 6.4,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "USERA. BP Gabriel García Márquez",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046228",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.3756,
+     "lon": -3.6972,
+     "district": "Usera",
+     "municipality": "Madrid",
+     "distance_km": 4.73,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "Biblioteca Municipal Pedro Antonio de Alarcón",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501402733",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 04/11/2026)",
+     "is_available": false,
+     "due_date": "04/11/2026",
+     "lat": 40.6385,
+     "lon": -4.0135,
+     "district": "San Lorenzo de El Escorial",
+     "municipality": "San Lorenzo de El Escorial",
+     "distance_km": 34.23,
+     "relative_to_library": "Biblioteca Pública José Acuña (Moncloa)",
+     "is_direct_match": false
+    }
+   ]
+  },
+  {
+   "selected": [
+    "damaso_alonso"
+   ],
+   "radius_km": 20.0,
+   "direct": [
+    {
+     "library": "CHAMARTÍN. BP Dámaso Alonso",
+     "location": "Depósito",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046221",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4632,
+     "lon": -3.6766,
+     "district": "Chamartín",
+     "municipality": "Madrid",
+     "distance_km": 0.0,
+     "relative_to_library": null,
+     "is_direct_match": true
+    }
+   ],
+   "nearby": [
+    {
+     "library": "HORTALEZA. BP Huerta de la Salud",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046220",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4703,
+     "lon": -3.6521,
+     "district": "Hortaleza",
+     "municipality": "Madrid",
+     "distance_km": 2.22,
+     "relative_to_library": "BP Dámaso Alonso (Chamartín)",
+     "is_direct_match": false
+    },
+    {
+     "library": "FUENCARRAL-EL PARDO. BP José Saramago",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046225",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 10/11/2026)",
+     "is_available": false,
+     "due_date": "10/11/2026",
+     "lat": 40.4728,
+     "lon": -3.7075,
+     "district": "Fuencarral-El Pardo",
+     "municipality": "Madrid",
+     "distance_km": 2.82,
+     "relative_to_library": "BP Dámaso Alonso (Chamartín)",
+     "is_direct_match": false
+    },
+    {
+     "library": "José Luis Sampedro",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "161498",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 12/11/2026)",
+     "is_available": false,
+     "due_date": "12/11/2026",
+     "lat": 40.4389,
+     "lon": -3.7072,
+     "district": "Chamberí",
+     "municipality": "Madrid",
+     "distance_km": 3.74,
+     "relative_to_library": "BP Dámaso Alonso (Chamartín)",
+     "is_direct_match": false
+    },
+    {
+     "library": "SAN BLAS. BP Canillejas",
+     "location": "Depósito",
+     "shelfmark": "N GAR cie",
+     "barcode": "1401293764",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "No disponible Nº de reservas: 1",
+     "is_available": false,
+     "due_date": null,
+     "lat": 40.4431,
+     "lon": -3.6125,
+     "district": "San Blas-Canillejas",
+     "municipality": "Madrid",
+     "distance_km": 5.87,
+     "relative_to_library": "BP Dámaso Alonso (Chamartín)",
+     "is_direct_match": false
+    },
+    {
+     "library": "USERA. BP Gabriel García Márquez",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046228",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.3756,
+     "lon": -3.6972,
+     "district": "Usera",
+     "municipality": "Madrid",
+     "distance_km": 9.9,
+     "relative_to_library": "BP Dámaso Alonso (Chamartín)",
+     "is_direct_match": false
+    },
+    {
+     "library": "LATINA. BP Aluche",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046227",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 23/10/2026)",
+     "is_available": false,
+     "due_date": "23/10/2026",
+     "lat": 40.3879,
+     "lon": -3.7547,
+     "district": "Latina",
+     "municipality": "Madrid",
+     "distance_km": 10.67,
+     "relative_to_library": "BP Dámaso Alonso (Chamartín)",
+     "is_direct_match": false
+    },
+    {
+     "library": "Biblioteca Municipal José Ortega y Gasset",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501434607",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4045,
+     "lon": -3.8765,
+     "district": "Boadilla del Monte",
+     "municipality": "Boadilla del Monte",
+     "distance_km": 18.13,
+     "relative_to_library": "BP Dámaso Alonso (Chamartín)",
+     "is_direct_match": false
+    }
+   ],
+   "other": [
+    {
+     "library": "Biblioteca Municipal de Loeches",
+     "location": "Sala adultos Novedad",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501726484",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": null,
+     "lon": null,
+     "district": null,
+     "municipality": null,
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "Biblioteca Municipal Pedro Antonio de Alarcón",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501402733",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 04/11/2026)",
+     "is_available": false,
+     "due_date": "04/11/2026",
+     "lat": 40.6385,
+     "lon": -4.0135,
+     "district": "San Lorenzo de El Escorial",
+     "municipality": "San Lorenzo de El Escorial",
+     "distance_km": 34.5,
+     "relative_to_library": "BP Dámaso Alonso (Chamartín)",
+     "is_direct_match": false
+    }
+   ]
+  },
+  {
+   "selected": [],
+   "radius_km": 5.0,
+   "direct": [],
+   "nearby": [],
+   "other": [
+    {
+     "library": "Biblioteca Municipal José Ortega y Gasset",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501434607",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4045,
+     "lon": -3.8765,
+     "district": "Boadilla del Monte",
+     "municipality": "Boadilla del Monte",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "José Luis Sampedro",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "161498",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 12/11/2026)",
+     "is_available": false,
+     "due_date": "12/11/2026",
+     "lat": 40.4389,
+     "lon": -3.7072,
+     "district": "Chamberí",
+     "municipality": "Madrid",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "Biblioteca Municipal de Loeches",
+     "location": "Sala adultos Novedad",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501726484",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": null,
+     "lon": null,
+     "district": null,
+     "municipality": null,
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "CHAMARTÍN. BP Dámaso Alonso",
+     "location": "Depósito",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046221",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4632,
+     "lon": -3.6766,
+     "district": "Chamartín",
+     "municipality": "Madrid",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "FUENCARRAL-EL PARDO. BP José Saramago",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046225",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 10/11/2026)",
+     "is_available": false,
+     "due_date": "10/11/2026",
+     "lat": 40.4728,
+     "lon": -3.7075,
+     "district": "Fuencarral-El Pardo",
+     "municipality": "Madrid",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "HORTALEZA. BP Huerta de la Salud",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046220",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4703,
+     "lon": -3.6521,
+     "district": "Hortaleza",
+     "municipality": "Madrid",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "LATINA. BP Aluche",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046227",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 23/10/2026)",
+     "is_available": false,
+     "due_date": "23/10/2026",
+     "lat": 40.3879,
+     "lon": -3.7547,
+     "district": "Latina",
+     "municipality": "Madrid",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "SAN BLAS. BP Canillejas",
+     "location": "Depósito",
+     "shelfmark": "N GAR cie",
+     "barcode": "1401293764",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "No disponible Nº de reservas: 1",
+     "is_available": false,
+     "due_date": null,
+     "lat": 40.4431,
+     "lon": -3.6125,
+     "district": "San Blas-Canillejas",
+     "municipality": "Madrid",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "USERA. BP Gabriel García Márquez",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046228",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.3756,
+     "lon": -3.6972,
+     "district": "Usera",
+     "municipality": "Madrid",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "Biblioteca Municipal Pedro Antonio de Alarcón",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501402733",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 04/11/2026)",
+     "is_available": false,
+     "due_date": "04/11/2026",
+     "lat": 40.6385,
+     "lon": -4.0135,
+     "district": "San Lorenzo de El Escorial",
+     "municipality": "San Lorenzo de El Escorial",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    }
+   ]
+  },
+  {
+   "selected": [
+    "RETIRO. BP Eugenio Trías"
+   ],
+   "radius_km": 5.0,
+   "direct": [],
+   "nearby": [
+    {
+     "library": "José Luis Sampedro",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "161498",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 12/11/2026)",
+     "is_available": false,
+     "due_date": "12/11/2026",
+     "lat": 40.4389,
+     "lon": -3.7072,
+     "district": "Chamberí",
+     "municipality": "Madrid",
+     "distance_km": 3.5,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "USERA. BP Gabriel García Márquez",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046228",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.3756,
+     "lon": -3.6972,
+     "district": "Usera",
+     "municipality": "Madrid",
+     "distance_km": 4.73,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    }
+   ],
+   "other": [
+    {
+     "library": "Biblioteca Municipal José Ortega y Gasset",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501434607",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4045,
+     "lon": -3.8765,
+     "district": "Boadilla del Monte",
+     "municipality": "Boadilla del Monte",
+     "distance_km": 16.76,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "Biblioteca Municipal de Loeches",
+     "location": "Sala adultos Novedad",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501726484",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": null,
+     "lon": null,
+     "district": null,
+     "municipality": null,
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "CHAMARTÍN. BP Dámaso Alonso",
+     "location": "Depósito",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046221",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4632,
+     "lon": -3.6766,
+     "district": "Chamartín",
+     "municipality": "Madrid",
+     "distance_km": 5.27,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "FUENCARRAL-EL PARDO. BP José Saramago",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046225",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 10/11/2026)",
+     "is_available": false,
+     "due_date": "10/11/2026",
+     "lat": 40.4728,
+     "lon": -3.7075,
+     "district": "Fuencarral-El Pardo",
+     "municipality": "Madrid",
+     "distance_km": 6.78,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "HORTALEZA. BP Huerta de la Salud",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046220",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4703,
+     "lon": -3.6521,
+     "district": "Hortaleza",
+     "municipality": "Madrid",
+     "distance_km": 6.48,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "LATINA. BP Aluche",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046227",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 23/10/2026)",
+     "is_available": false,
+     "due_date": "23/10/2026",
+     "lat": 40.3879,
+     "lon": -3.7547,
+     "district": "Latina",
+     "municipality": "Madrid",
+     "distance_km": 7.11,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "SAN BLAS. BP Canillejas",
+     "location": "Depósito",
+     "shelfmark": "N GAR cie",
+     "barcode": "1401293764",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "No disponible Nº de reservas: 1",
+     "is_available": false,
+     "due_date": null,
+     "lat": 40.4431,
+     "lon": -3.6125,
+     "district": "San Blas-Canillejas",
+     "municipality": "Madrid",
+     "distance_km": 6.4,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    },
+    {
+     "library": "Biblioteca Municipal Pedro Antonio de Alarcón",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501402733",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 04/11/2026)",
+     "is_available": false,
+     "due_date": "04/11/2026",
+     "lat": 40.6385,
+     "lon": -4.0135,
+     "district": "San Lorenzo de El Escorial",
+     "municipality": "San Lorenzo de El Escorial",
+     "distance_km": 37.58,
+     "relative_to_library": "BP Eugenio Trías (Retiro)",
+     "is_direct_match": false
+    }
+   ]
+  },
+  {
+   "selected": [
+    "unknown_id"
+   ],
+   "radius_km": 5.0,
+   "direct": [],
+   "nearby": [],
+   "other": [
+    {
+     "library": "Biblioteca Municipal José Ortega y Gasset",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501434607",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4045,
+     "lon": -3.8765,
+     "district": "Boadilla del Monte",
+     "municipality": "Boadilla del Monte",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "José Luis Sampedro",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "161498",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 12/11/2026)",
+     "is_available": false,
+     "due_date": "12/11/2026",
+     "lat": 40.4389,
+     "lon": -3.7072,
+     "district": "Chamberí",
+     "municipality": "Madrid",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "Biblioteca Municipal de Loeches",
+     "location": "Sala adultos Novedad",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501726484",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": null,
+     "lon": null,
+     "district": null,
+     "municipality": null,
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "CHAMARTÍN. BP Dámaso Alonso",
+     "location": "Depósito",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046221",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4632,
+     "lon": -3.6766,
+     "district": "Chamartín",
+     "municipality": "Madrid",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "FUENCARRAL-EL PARDO. BP José Saramago",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046225",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 10/11/2026)",
+     "is_available": false,
+     "due_date": "10/11/2026",
+     "lat": 40.4728,
+     "lon": -3.7075,
+     "district": "Fuencarral-El Pardo",
+     "municipality": "Madrid",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "HORTALEZA. BP Huerta de la Salud",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046220",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.4703,
+     "lon": -3.6521,
+     "district": "Hortaleza",
+     "municipality": "Madrid",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "LATINA. BP Aluche",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046227",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 23/10/2026)",
+     "is_available": false,
+     "due_date": "23/10/2026",
+     "lat": 40.3879,
+     "lon": -3.7547,
+     "district": "Latina",
+     "municipality": "Madrid",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "SAN BLAS. BP Canillejas",
+     "location": "Depósito",
+     "shelfmark": "N GAR cie",
+     "barcode": "1401293764",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "No disponible Nº de reservas: 1",
+     "is_available": false,
+     "due_date": null,
+     "lat": 40.4431,
+     "lon": -3.6125,
+     "district": "San Blas-Canillejas",
+     "municipality": "Madrid",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "USERA. BP Gabriel García Márquez",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1402046228",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Disponible",
+     "is_available": true,
+     "due_date": null,
+     "lat": 40.3756,
+     "lon": -3.6972,
+     "district": "Usera",
+     "municipality": "Madrid",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    },
+    {
+     "library": "Biblioteca Municipal Pedro Antonio de Alarcón",
+     "location": "Sala adultos",
+     "shelfmark": "N GAR cie",
+     "barcode": "1501402733",
+     "item_type": "Prestable. Libros",
+     "support": "Libro",
+     "status_raw": "Prestado (hasta 04/11/2026)",
+     "is_available": false,
+     "due_date": "04/11/2026",
+     "lat": 40.6385,
+     "lon": -4.0135,
+     "district": "San Lorenzo de El Escorial",
+     "municipality": "San Lorenzo de El Escorial",
+     "distance_km": null,
+     "relative_to_library": null,
+     "is_direct_match": false
+    }
+   ]
+  }
+ ],
+ "batch": [
+  {
+   "selected": [
+    "eugenio_trias"
+   ],
+   "radius_km": 5.0,
+   "success": true,
+   "result": {
+    "book_id": "b1",
+    "title": "Cien años de soledad",
+    "author": "García Márquez",
+    "cover_image_url": null,
+    "is_available": true,
+    "total_editions": 3,
+    "total_copies": 10,
+    "total_available_copies": 5,
+    "status_summary": "Disponible en USERA. BP Gabriel García Márquez (a 4.7 km)",
+    "best_match_library": "USERA. BP Gabriel García Márquez",
+    "best_match_distance_km": 4.73,
+    "direct_matches_count": 0,
+    "direct_matches_available": 0
+   }
+  },
+  {
+   "selected": [
+    "ortega_y_gasset"
+   ],
+   "radius_km": 5.0,
+   "success": true,
+   "result": {
+    "book_id": "b1",
+    "title": "Cien años de soledad",
+    "author": "García Márquez",
+    "cover_image_url": null,
+    "is_available": true,
+    "total_editions": 3,
+    "total_copies": 10,
+    "total_available_copies": 5,
+    "status_summary": "Disponible en Biblioteca Municipal José Ortega y Gasset",
+    "best_match_library": "Biblioteca Municipal José Ortega y Gasset",
+    "best_match_distance_km": 0.0,
+    "direct_matches_count": 1,
+    "direct_matches_available": 1
+   }
+  },
+  {
+   "selected": [
+    "jose_luis_sampedro"
+   ],
+   "radius_km": 5.0,
+   "success": true,
+   "result": {
+    "book_id": "b1",
+    "title": "Cien años de soledad",
+    "author": "García Márquez",
+    "cover_image_url": null,
+    "is_available": true,
+    "total_editions": 3,
+    "total_copies": 10,
+    "total_available_copies": 5,
+    "status_summary": "Disponible en CHAMARTÍN. BP Dámaso Alonso (a 3.7 km)",
+    "best_match_library": "CHAMARTÍN. BP Dámaso Alonso",
+    "best_match_distance_km": 3.74,
+    "direct_matches_count": 1,
+    "direct_matches_available": 0
+   }
+  },
+  {
+   "selected": [
+    "canillejas"
+   ],
+   "radius_km": 1.0,
+   "success": true,
+   "result": {
+    "book_id": "b1",
+    "title": "Cien años de soledad",
+    "author": "García Márquez",
+    "cover_image_url": null,
+    "is_available": true,
+    "total_editions": 3,
+    "total_copies": 10,
+    "total_available_copies": 5,
+    "status_summary": "Disponible en Biblioteca Municipal José Ortega y Gasset",
+    "best_match_library": "Biblioteca Municipal José Ortega y Gasset",
+    "best_match_distance_km": null,
+    "direct_matches_count": 1,
+    "direct_matches_available": 0
+   }
+  },
+  {
+   "selected": [],
+   "radius_km": 5.0,
+   "success": true,
+   "result": {
+    "book_id": "b1",
+    "title": "Cien años de soledad",
+    "author": "García Márquez",
+    "cover_image_url": null,
+    "is_available": true,
+    "total_editions": 3,
+    "total_copies": 10,
+    "total_available_copies": 5,
+    "status_summary": "Disponible en Biblioteca Municipal José Ortega y Gasset",
+    "best_match_library": "Biblioteca Municipal José Ortega y Gasset",
+    "best_match_distance_km": null,
+    "direct_matches_count": 0,
+    "direct_matches_available": 0
+   }
+  },
+  {
+   "selected": [
+    "eugenio_trias"
+   ],
+   "radius_km": 5.0,
+   "success": false,
+   "result": {
+    "book_id": "b1",
+    "title": "Cien años de soledad",
+    "author": "García Márquez",
+    "cover_image_url": null,
+    "is_available": false,
+    "total_editions": 0,
+    "total_copies": 0,
+    "total_available_copies": 0,
+    "status_summary": "No encontrado en catálogo",
+    "best_match_library": null,
+    "best_match_distance_km": null,
+    "direct_matches_count": 0,
+    "direct_matches_available": 0
+   }
+  },
+  {
+   "selected": [
+    "jose_luis_sampedro"
+   ],
+   "radius_km": 5.0,
+   "success": true,
+   "only_loaned": true,
+   "result": {
+    "book_id": "b1",
+    "title": "Cien años de soledad",
+    "author": "García Márquez",
+    "cover_image_url": null,
+    "is_available": false,
+    "total_editions": 3,
+    "total_copies": 5,
+    "total_available_copies": 0,
+    "status_summary": "Prestado en José Luis Sampedro",
+    "best_match_library": null,
+    "best_match_distance_km": null,
+    "direct_matches_count": 1,
+    "direct_matches_available": 0
+   }
+  },
+  {
+   "selected": [
+    "eugenio_trias"
+   ],
+   "radius_km": 5.0,
+   "success": true,
+   "only_loaned": true,
+   "result": {
+    "book_id": "b1",
+    "title": "Cien años de soledad",
+    "author": "García Márquez",
+    "cover_image_url": null,
+    "is_available": false,
+    "total_editions": 3,
+    "total_copies": 5,
+    "total_available_copies": 0,
+    "status_summary": "Prestado (5 ejemplares en red)",
+    "best_match_library": null,
+    "best_match_distance_km": null,
+    "direct_matches_count": 0,
+    "direct_matches_available": 0
+   }
+  }
+ ],
+ "eugenio_trias": {
+  "id": "eugenio_trias",
+  "name": "BP Eugenio Trías (Retiro)",
+  "aliases": [
+   "eugenio trias",
+   "bp eugenio trias",
+   "retiro bp eugenio trias",
+   "retiro. bp eugenio trías",
+   "eugenio trías"
+  ],
+  "lat": 40.4158,
+  "lon": -3.6791,
+  "district": "Retiro",
+  "municipality": "Madrid",
+  "address": "Paseo Fernán Núñez, 24 (Parque de El Retiro), 28009 Madrid"
+ }
+}

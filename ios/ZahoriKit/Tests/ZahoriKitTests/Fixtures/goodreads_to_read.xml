@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" >
+  <channel>
+    <xhtml:meta xmlns:xhtml="http://www.w3.org/1999/xhtml" name="robots" content="noindex" />
+    <title>Jonathan's bookshelf: to-read</title>
+    <copyright><![CDATA[Copyright (C) 2026 Goodreads LLC. All rights reserved.]]>
+    </copyright>
+    <link><![CDATA[https://www.goodreads.com/review/list_rss/177587843?shelf=to-read]]></link>
+    <atom:link href="https://www.goodreads.com/review/list_rss/177587843?shelf=to-read" rel="self" type="application/rss+xml" />
+    <description><![CDATA[Jonathan's bookshelf: to-read]]></description>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 21 Apr 2024 17:10:24 -0700</lastBuildDate>
+    <ttl>60</ttl>
+    <image>
+      <title>Jonathan's bookshelf: to-read</title>
+      <link><![CDATA[https://www.goodreads.com/review/list_rss/177587843?shelf=to-read]]></link>
+      <width>144</width>
+      <height>41</height>
+      <url>https://www.goodreads.com/images/layout/goodreads_logo_144.jpg</url>
+    </image>
+    
+  <item>
+    <guid><![CDATA[https://www.goodreads.com/review/show/6446562781?utm_medium=api&utm_source=rss]]></guid>
+    <pubDate><![CDATA[Sun, 21 Apr 2024 17:10:24 -0700]]></pubDate>
+    <title><![CDATA[For Love of Country: Common Sense 2.0]]></title>
+    <link><![CDATA[https://www.goodreads.com/review/show/6446562781?utm_medium=api&utm_source=rss]]></link>
+    <book_id>205951357</book_id>
+    <book_image_url><![CDATA[https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1706184524l/205951357._SY75_.jpg]]></book_image_url>
+    <book_small_image_url><![CDATA[https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1706184524l/205951357._SY75_.jpg]]></book_small_image_url>
+    <book_medium_image_url><![CDATA[https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1706184524l/205951357._SX98_.jpg]]></book_medium_image_url>
+    <book_large_image_url><![CDATA[https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1706184524l/205951357._SY475_.jpg]]></book_large_image_url>
+    <book_description><![CDATA[In 1776, Thomas Paine anonymously produced <i>Common Sense</i>, a pamphlet advocating for colonial independence from Great Britain. If Paine’s revolutionary words had been revealed to the British authorities prior to their publication in the colonies, his writings most certainly would have resulted in his death. Paine insisted that British rule was directly responsible for nearly every problem in colonial society. Paine’s political views and his fellow revolutionaries’ actions led to the formation of a more perfect union. Today, that union is under attack.<br /><br />Like Paine, Norman W. Holden is unabashed in his calling for renewed independence and a national uprising. <i>For Love of Common Sense 2.0</i> will strike at the nerve that troubles most all Americans. Sickened by our national complacency and polarization, a widening political divide, and our wayward government, Holden’s editorial and ultimate diagnosis for America may be a hard pill to swallow. With freedom at risk, Americans have little choice but to accept this cure.]]></book_description>
+    <book id="205951357">
+      <num_pages>138</num_pages>
+    </book>
+    <author_name>Norman W. Holden</author_name>
+    <isbn>1736220365</isbn>
+    <user_name>Jonathan</user_name>
+    <user_rating>0</user_rating>
+    <user_read_at></user_read_at>
+    <user_date_added><![CDATA[Sun, 21 Apr 2024 17:10:24 -0700]]></user_date_added>
+    <user_date_created><![CDATA[Sun, 21 Apr 2024 17:10:24 -0700]]></user_date_created>
+    <user_shelves>to-read</user_shelves>
+    <user_review></user_review>
+    <average_rating>4.75</average_rating>
+    <book_published></book_published>
+    <description>
+      <![CDATA[
+      <a href="https://www.goodreads.com/book/show/205951357-for-love-of-country?utm_medium=api&amp;utm_source=rss"><img alt="For Love of Country: Common Sense 2.0" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1706184524l/205951357._SY75_.jpg" /></a><br/>
+                                      author: Norman W. Holden<br/>
+                                      name: Jonathan<br/>
+                                      average rating: 4.75<br/>
+                                      book published: <br/>
+                                      rating: 0<br/>
+                                      read at: <br/>
+                                      date added: 2024/04/21<br/>
+                                      shelves: to-read<br/>
+                                      review: <br/><br/>
+                                      ]]>
+    </description>
+  </item>
+
+  </channel>
+</rss>

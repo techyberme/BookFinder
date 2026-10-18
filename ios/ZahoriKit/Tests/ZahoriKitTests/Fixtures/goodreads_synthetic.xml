@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" >
+  <channel>
+    <title>Ana García’s bookshelf: currently-reading</title>
+    <link><![CDATA[https://www.goodreads.com/review/list_rss/155193797?shelf=currently-reading]]></link>
+  <item>
+    <guid><![CDATA[https://www.goodreads.com/review/show/1?utm_medium=api&utm_source=rss]]></guid>
+    <pubDate><![CDATA[Mon, 01 Jan 2024 10:00:00 -0800]]></pubDate>
+    <title><![CDATA[Dune (Dune Chronicles, #1)]]></title>
+    <link><![CDATA[https://www.goodreads.com/review/show/1]]></link>
+    <book_id>44767458</book_id>
+    <book_image_url><![CDATA[https://i.gr-assets.com/images/S/dune._SY75_.jpg]]></book_image_url>
+    <book_medium_image_url><![CDATA[https://i.gr-assets.com/images/S/dune._SY100_.jpg]]></book_medium_image_url>
+    <book_large_image_url><![CDATA[https://i.gr-assets.com/images/S/dune._SY475_.jpg]]></book_large_image_url>
+    <author_name>Frank Herbert</author_name>
+    <isbn>0441172717</isbn>
+    <user_rating>5</user_rating>
+    <user_date_added><![CDATA[Mon, 01 Jan 2024 10:00:00 -0800]]></user_date_added>
+    <user_shelves>currently-reading, sci-fi</user_shelves>
+  </item>
+  <item>
+    <guid><![CDATA[https://www.goodreads.com/review/show/2]]></guid>
+    <pubDate><![CDATA[Tue, 02 Jan 2024 10:00:00 -0800]]></pubDate>
+    <title><![CDATA[Cien años de soledad (Edición 50 Aniversario)]]></title>
+    <link><![CDATA[https://www.goodreads.com/review/show/2]]></link>
+    <book_id>  320  </book_id>
+    <book_image_url><![CDATA[https://s.gr-assets.com/assets/nophoto/book/111x148.png]]></book_image_url>
+    <author_name>Gabriel García Márquez</author_name>
+    <isbn></isbn>
+    <isbn13>9788497592208</isbn13>
+    <user_rating>not-a-number</user_rating>
+    <user_date_added></user_date_added>
+    <user_shelves></user_shelves>
+  </item>
+  <item>
+    <guid><![CDATA[https://www.goodreads.com/review/show/3]]></guid>
+    <pubDate><![CDATA[Wed, 03 Jan 2024 10:00:00 -0800]]></pubDate>
+    <title><![CDATA[El infinito en un junco: La invención de los libros en el mundo antiguo]]></title>
+    <author_name>Irene Vallejo</author_name>
+  </item>
+  <item>
+    <title><![CDATA[Watchmen [Graphic Novel] (Absolute Edition)]]></title>
+    <author_name>Alan Moore</author_name>
+    <user_rating>3</user_rating>
+  </item>
+  <item>
+    <guid><![CDATA[https://www.goodreads.com/review/show/5]]></guid>
+    <title></title>
+    <author_name>Skipped Because No Title</author_name>
+  </item>
+  <item>
+    <book_id>999</book_id>
+    <title>   ¿Quién se ha llevado mi queso? (Spanish Edition)   </title>
+    <author_name>Spencer Johnson</author_name>
+  </item>
+  </channel>
+</rss>
