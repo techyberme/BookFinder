@@ -63,6 +63,8 @@ public struct OPACClient: CatalogSearching {
     struct Session {
         var http: HTTPClient
         var actionURL: URL
+        /// The advanced-search page; it also carries the reader login form (`abnopid`).
+        var formPage: HTTPResponse
     }
 
     enum HandshakeError: Error {
@@ -86,7 +88,7 @@ public struct OPACClient: CatalogSearching {
         guard adv.status == 200 else { throw NetworkError.http(status: adv.status) }
 
         let action = parser.formAction(adv.text).flatMap { URL(string: $0, relativeTo: advURL)?.absoluteURL } ?? advURL
-        return Session(http: http, actionURL: action)
+        return Session(http: http, actionURL: action, formPage: adv)
     }
 
     // MARK: - Search

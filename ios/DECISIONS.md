@@ -34,3 +34,12 @@ Running log of choices made while porting the Python/web app. Newest at the bott
 | 27 | DEBUG-only launch arguments `-ZahoriTab n`, `-ZahoriSearch "title|author"`, `-ZahoriScrollTo sections` for screenshots/manual QA. Compiled out of Release. | Lets screens be verified from the command line. |
 | 28 | Book detail shows the **first edition** only (Python's `full_result = results[0]`), while the summary counts every edition. | Reproduces Python. See open question Q5. |
 | 29 | Only the 2 recommended books get their status updated after Recomendaciones, as in the web app. | Reproduces `findAvailableRecommendations`. |
+| 30 | **Préstamos (reader area)** added after the port, scoped to the loans list + due-date reminders; renewals deliberately left out. | Your choice. Read-only first; renewing changes the account. |
+| 31 | Loans parsed from the hidden `varJSONpr` block and element ids/classes only. | The saved pages had accents replaced by `�`; class-based parsing survives that and is less brittle than labels. |
+| 32 | Login success = "Desconectar" (ACC=202) link present and no password field; password field shown again = wrong credentials; anything else = catalog unavailable. | No failed-login page was available; this is the most conservative detection. |
+| 33 | Credentials in the Keychain, this device only, after-first-unlock; saved only after a successful login. | Your choice ("Keychain"). Prevents storing typos. |
+| 34 | Reader session closed with "Desconectar" after every fetch, even on errors. | Polite to the OPAC; avoids leaving an authenticated session open. |
+| 35 | Reminders at 10:00 Europe/Madrid, N days before (default 2, 1–7) + due day; past ones skipped; stable ids so rescheduling replaces them. | OPAC dates are Madrid time regardless of where the phone is. |
+| 36 | Fixtures anonymised by structure (whole sections removed) plus a guard that fails on e-mail/phone/DNI/old dates; the real loan replaced with a fictional one. | The saved pages still contained personal data and reading history. The script never contains the user's values. |
+| 37 | `AppSettings` decodes missing keys with defaults. | Adding reminder settings must not reset existing settings files. |
+| 38 | The wrong-password live test needs its own flag (`ZAHORI_TEST_WRONG_PIN=1`). | Failed logins may count towards an account lockout. |

@@ -58,12 +58,41 @@ public struct AppSettings: Codable, Equatable, Sendable {
     public var goodreadsUserID: String?
     public var goodreadsUserName: String?
     public var shelf: String = "to-read"
+    /// Local notifications before each loan's due date.
+    public var loanRemindersEnabled = true
+    public var reminderDaysBefore = 2
+
+    public static let reminderDaysRange = 1...7
 
     public init() {}
+
+    /// Missing keys fall back to defaults, so settings saved by older versions keep loading.
+    public init(from decoder: Decoder) throws {
+        let c = try decoder.container(keyedBy: CodingKeys.self)
+        let d = AppSettings()
+        selectedLibraryIDs = try c.decodeIfPresent([String].self, forKey: .selectedLibraryIDs) ?? d.selectedLibraryIDs
+        radiusKm = try c.decodeIfPresent(Int.self, forKey: .radiusKm) ?? d.radiusKm
+        goodreadsUserID = try c.decodeIfPresent(String.self, forKey: .goodreadsUserID)
+        goodreadsUserName = try c.decodeIfPresent(String.self, forKey: .goodreadsUserName)
+        shelf = try c.decodeIfPresent(String.self, forKey: .shelf) ?? d.shelf
+        loanRemindersEnabled = try c.decodeIfPresent(Bool.self, forKey: .loanRemindersEnabled) ?? d.loanRemindersEnabled
+        reminderDaysBefore = try c.decodeIfPresent(Int.self, forKey: .reminderDaysBefore) ?? d.reminderDaysBefore
+    }
 
     /// Port of the slider/number-field sync in frontend/app.js: clamp to 1...20.
     public static func clampRadius(_ value: Int) -> Int {
         min(max(value, radiusRange.lowerBound), radiusRange.upperBound)
+    }
+}
+
+/// Last successful loans download, shown with "actualizado hace X" when the OPAC is unreachable.
+public struct CachedLoans: Codable, Equatable, Sendable {
+    public var loans: [Loan]
+    public var fetchedAt: Date
+
+    public init(loans: [Loan], fetchedAt: Date) {
+        self.loans = loans
+        self.fetchedAt = fetchedAt
     }
 }
 

@@ -75,4 +75,35 @@ final class LiveTests: XCTestCase {
         let recs = await service.recommendations(from: books, proximity: Proximity(selectedLibraries: ["eugenio_trias"], radiusKm: 5), using: &rng)
         XCTAssertGreaterThanOrEqual(recs.count, 1)
     }
+
+    /// Real login with your own card. Credentials only come from the environment:
+    ///   ZAHORI_LIVE_TESTS=1 ZAHORI_CARNE=… ZAHORI_PIN=… swift test --filter LiveTests/testLiveReaderLoans
+    func testLiveReaderLoans() async throws {
+        let env = ProcessInfo.processInfo.environment
+        guard let card = env["ZAHORI_CARNE"], let pin = env["ZAHORI_PIN"], !card.isEmpty, !pin.isEmpty else {
+            throw XCTSkip("Set ZAHORI_CARNE and ZAHORI_PIN to test the reader login")
+        }
+        let result = await ReaderClient(opac: OPACClient(timeout: 25)).fetchLoans(ReaderCredentials(card: card, password: pin))
+        switch result {
+        case let .success(loans):
+            // Print only counts and dates: no titles or personal data in test logs.
+            print("Loans: \(loans.count); due dates: \(loans.map(\.dueDateText))")
+            XCTAssert(loans.allSatisfy { !$0.barcode.isEmpty && $0.dueDate != nil })
+        case let .failure(error):
+            XCTFail("Reader login failed: \(error)")
+        }
+    }
+
+    /// A wrong password must be reported as such, not as "catalog unavailable".
+    /// Failed logins may count towards an account lock, so this needs its own explicit flag:
+    ///   ZAHORI_LIVE_TESTS=1 ZAHORI_CARNE=… ZAHORI_TEST_WRONG_PIN=1 swift test --filter LiveTests/testLiveReaderWrongPassword
+    func testLiveReaderWrongPassword() async throws {
+        let env = ProcessInfo.processInfo.environment
+        guard let card = env["ZAHORI_CARNE"], !card.isEmpty, env["ZAHORI_TEST_WRONG_PIN"] == "1" else {
+            throw XCTSkip("Set ZAHORI_CARNE and ZAHORI_TEST_WRONG_PIN=1 to test a rejected login")
+        }
+        let result = await ReaderClient(opac: OPACClient(timeout: 25))
+            .fetchLoans(ReaderCredentials(card: card, password: "Incorrecta0"))
+        XCTAssertEqual(result, .failure(.invalidCredentials))
+    }
 }

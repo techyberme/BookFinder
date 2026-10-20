@@ -3,6 +3,7 @@ import SwiftUI
 @main
 struct ZahoriApp: App {
     @State private var model = AppModel()
+    @State private var loans = LoansModel()
 
     init() {
         // Editorial navigation titles: Fraunces for large titles, Plus Jakarta Sans for inline ones.
@@ -18,10 +19,13 @@ struct ZahoriApp: App {
         WindowGroup {
             RootView()
                 .environment(model)
+                .environment(loans)
                 .tint(Palette.accent)
                 .task {
                     if model.settings.selectedLibraryIDs.isEmpty { model.location.requestIfNeeded() }
-                    await model.restore()
+                    async let shelf: Void = model.restore()
+                    async let reader: Void = loans.refresh(settings: model.settings)
+                    _ = await (shelf, reader)
                 }
         }
     }
@@ -36,6 +40,8 @@ struct RootView: View {
                 .tabItem { Label("Estantería", systemImage: "books.vertical") }.tag(0)
             SearchView()
                 .tabItem { Label("Buscar", systemImage: "magnifyingglass") }.tag(1)
+            LoansView()
+                .tabItem { Label("Préstamos", systemImage: "calendar.badge.clock") }.tag(3)
             LibrarySettingsView()
                 .tabItem { Label("Bibliotecas", systemImage: "building.columns") }.tag(2)
         }
@@ -44,7 +50,8 @@ struct RootView: View {
 }
 
 extension RootView {
-    /// DEBUG-only screenshot hook: `-ZahoriTab 1` opens a tab, `-ZahoriSearch "title|author"` runs a search.
+    /// DEBUG-only screenshot hooks: `-ZahoriTab n` opens a tab (0 shelf, 1 search, 3 loans, 2 libraries),
+    /// `-ZahoriSearch "title|author"` runs a search, `-ZahoriPreviewLoans YES` shows the cached loans without a login.
     static var initialTab: Int {
         #if DEBUG
         return UserDefaults.standard.integer(forKey: "ZahoriTab")

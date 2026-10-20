@@ -76,6 +76,15 @@ Every behaviour of the reference app and where it lives now. ✅ identical (gold
 | Changing settings re-renders stale groups | Regroups live | 🔁 |
 | Service-worker offline shell | Cached shelf + results with "actualizado hace X" | 🔁 |
 
+## New in iOS (no Python equivalent)
+
+| Feature | Swift |
+|---|---|
+| Reader login (`abnopid`, ACC=201) and logout (ACC=202) | `ReaderClient`, `ReaderParser.loginForm/isLoggedIn` |
+| Current loans from "Mi biblioteca" (ACC=210) | `ReaderParser.parseLoans` → `Loan` |
+| Due-date reminders | `LoanReminders.plan` (pure, tested) + `LoansModel.scheduleReminders` |
+| Credentials | `CredentialStore` (Keychain) |
+
 ## Tests (`tests/`)
 
 | Python test | XCTest |
