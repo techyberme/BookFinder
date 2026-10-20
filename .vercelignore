@@ -1,0 +1,6 @@
+# Never upload personal pages saved while logged in to the catalog.
+htmls/
+web/node_modules/
+web/dist/
+README_files/
+*.icns
