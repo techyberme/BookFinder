@@ -1,0 +1,14 @@
+{
+  "framework": null,
+  "installCommand": "cd web && npm ci",
+  "buildCommand": "cd web && npm run build",
+  "outputDirectory": "web/dist",
+  "regions": ["cdg1"],
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 120,
+      "excludeFiles": "{ios/**,web/**,frontend/**,tests/**,htmls/**,README_files/**}"
+    }
+  },
+  "rewrites": [{ "source": "/api/(.*)", "destination": "/api/index" }]
+}

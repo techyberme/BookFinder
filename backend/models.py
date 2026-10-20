@@ -59,6 +59,11 @@ class SearchResponse(BaseModel):
     total_available_copies: int = 0
     results: List[BookResult] = Field(default_factory=list)
     error: Optional[str] = None
+    # Explicit result kind (iOS `SearchOutcome`): "found", "no_results", "invalid_query" or
+    # "catalog_unavailable". A catalog outage or unknown markup is never reported as "no_results".
+    outcome: str = "found"
+    # True when some edition detail pages could not be fetched.
+    is_partial: bool = False
 
 
 # --- Batch & Goodreads Models ---

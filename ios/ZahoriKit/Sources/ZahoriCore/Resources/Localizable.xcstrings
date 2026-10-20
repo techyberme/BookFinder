@@ -1,0 +1,16 @@
+{
+  "sourceLanguage" : "es",
+  "strings" : {
+    "Catálogo no disponible" : {},
+    "Disponible en %@" : {},
+    "Disponible en %@ (a %@ km)" : {},
+    "El préstamo vence en %lld días (%@) en %@." : {},
+    "Hoy vence el préstamo en %@." : {},
+    "Mañana vence el préstamo en %@." : {},
+    "No disponible" : {},
+    "No encontrado en catálogo" : {},
+    "Prestado (%lld ejemplares en red)" : {},
+    "Prestado en %@" : {}
+  },
+  "version" : "1.0"
+}

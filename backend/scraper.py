@@ -39,6 +39,11 @@ class AbsysNetScraper:
 
     async def _init_session(self, client: httpx.AsyncClient) -> Tuple[str, str]:
         """Initializes a new OPAC session and retrieves the session search URL and action URL."""
+        session_url, action_url, _ = await self._open_session(client)
+        return session_url, action_url
+
+    async def _open_session(self, client: httpx.AsyncClient) -> Tuple[str, str, httpx.Response]:
+        """Like `_init_session`, also returning the advanced-search page (it carries the reader login form)."""
         resp = await client.get(OPAC_BASE_URL, headers=self.headers, timeout=self.timeout)
         resp.raise_for_status()
 
@@ -66,7 +71,7 @@ class AbsysNetScraper:
         else:
             action_url = urllib.parse.urljoin(adv_url, form["action"])
 
-        return session_url, action_url
+        return session_url, action_url, resp_adv
 
     def _parse_holdings_from_html(self, html: str) -> List[HoldingItem]:
         """Parses the holdings/copies accordion tables from an item detail page and enriches with geodata."""
@@ -346,6 +351,7 @@ class AbsysNetScraper:
         if not title and not author:
             return SearchResponse(
                 success=False,
+                outcome="invalid_query",
                 error="Debe especificar al menos un título o un autor para buscar.",
             )
 
@@ -360,6 +366,7 @@ class AbsysNetScraper:
                     query_author=author,
                     selected_libraries=selected_libraries,
                     radius_km=radius_km,
+                    outcome="catalog_unavailable",
                     error=f"No se pudo conectar con el catálogo de bibliotecas: {str(e)}",
                 )
 
@@ -424,6 +431,7 @@ class AbsysNetScraper:
                     query_author=author,
                     selected_libraries=selected_libraries,
                     radius_km=radius_km,
+                    outcome="catalog_unavailable",
                     error=f"Error al enviar la consulta al catálogo: {str(e)}",
                 )
 
@@ -461,6 +469,7 @@ class AbsysNetScraper:
             if no_results_indicator:
                 return SearchResponse(
                     success=True,
+                    outcome="no_results",
                     query_title=title,
                     query_author=author,
                     selected_libraries=selected_libraries,
@@ -491,10 +500,17 @@ class AbsysNetScraper:
                         results=[book],
                     )
 
-            # 2. No Results fallback
+            # 2. No Results fallback. None of the known markers (or a record without a title) means the
+            # markup changed: flagged as catalog_unavailable so it is never shown as "not in catalog".
             if not docs_info:
                 return SearchResponse(
                     success=True,
+                    outcome="catalog_unavailable",
+                    error=(
+                        "Ficha del catálogo sin título reconocible"
+                        if has_bib_fields or has_copies_table
+                        else "El catálogo devolvió una página no reconocida"
+                    ),
                     query_title=title,
                     query_author=author,
                     selected_libraries=selected_libraries,
@@ -507,7 +523,19 @@ class AbsysNetScraper:
 
             # 3. Multi-Record Result List Page
             items_meta = self._parse_list_page(search_html, final_search_url)
+            if not items_meta:
+                return SearchResponse(
+                    success=True,
+                    outcome="catalog_unavailable",
+                    error="El catálogo devolvió una página no reconocida",
+                    query_title=title,
+                    query_author=author,
+                    selected_libraries=selected_libraries,
+                    radius_km=radius_km,
+                    results=[],
+                )
             selected_items = items_meta[:max_items]
+            failed_details: List[str] = []
 
             async def fetch_item_detail(meta: dict, detail_url: str) -> BookResult:
                 try:
@@ -522,6 +550,7 @@ class AbsysNetScraper:
                 except Exception as ex:
                     logger.warning(f"Error fetching detail for {detail_url}: {ex}")
 
+                failed_details.append(detail_url)
                 return BookResult(
                     title=meta.get("title", "Sin título"),
                     author=meta.get("author"),
@@ -534,6 +563,18 @@ class AbsysNetScraper:
 
             tasks = [fetch_item_detail(meta, url) for meta, url in selected_items]
             books = await asyncio.gather(*tasks)
+
+            if len(failed_details) == len(books):
+                return SearchResponse(
+                    success=True,
+                    outcome="catalog_unavailable",
+                    error="No se pudieron cargar las fichas del catálogo",
+                    query_title=title,
+                    query_author=author,
+                    selected_libraries=selected_libraries,
+                    radius_km=radius_km,
+                    results=[],
+                )
 
             self._apply_geospatial_grouping(books, selected_libraries, radius_km)
 
@@ -550,4 +591,5 @@ class AbsysNetScraper:
                 total_copies=total_copies,
                 total_available_copies=total_available,
                 results=books,
+                is_partial=bool(failed_details),
             )

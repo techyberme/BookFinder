@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>es</string>
+	<key>CFBundleDisplayName</key>
+	<string>Zahorí</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Zahorí usa tu ubicación para mostrar las bibliotecas con ejemplares disponibles más cerca de ti cuando no has elegido bibliotecas de referencia.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Fraunces-400.ttf</string>
+		<string>Fraunces-600.ttf</string>
+		<string>Fraunces-700.ttf</string>
+		<string>PlusJakartaSans-400.ttf</string>
+		<string>PlusJakartaSans-500.ttf</string>
+		<string>PlusJakartaSans-600.ttf</string>
+		<string>PlusJakartaSans-700.ttf</string>
+		<string>PlusJakartaSans-800.ttf</string>
+		<string>JetBrainsMono-400.ttf</string>
+		<string>JetBrainsMono-600.ttf</string>
+	</array>
+</dict>
+</plist>

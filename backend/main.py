@@ -1,16 +1,20 @@
 """FastAPI backend application for Madrid Public Libraries Book Availability & Goodreads Integration."""
 
 import asyncio
+import datetime
+import json
 import logging
+import urllib.parse
 import random
 import sys
 from pathlib import Path
 from typing import List, Optional
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response
+from pydantic import BaseModel, ValidationError
 from fastapi.staticfiles import StaticFiles
 
 from .models import (
@@ -23,6 +27,7 @@ from .models import (
 )
 from .scraper import AbsysNetScraper
 from .madrid_libraries_geo import get_all_libraries_list
+from . import reader
 from .goodreads_service import (
     fetch_goodreads_shelf,
     clean_book_title_for_search,
@@ -120,6 +125,54 @@ async def search_books(
             status_code=502,
             detail=f"Error al interactuar con el catálogo de bibliotecas: {str(e)}",
         )
+
+
+@app.get("/api/check", response_model=SearchResponse)
+async def check_book(
+    title: str = Query("", description="Shelf book title (its clean_title); cleaned again like the batch check"),
+    author: str = Query("", description="Author"),
+    limit: int = Query(2, ge=1, le=10, description="Editions to fetch holdings for"),
+):
+    """One shelf book, ungrouped (the web client groups by proximity itself, like the iOS app).
+    Same query as `_check_single_book_availability`, but returns the raw search with its `outcome`."""
+    return await scraper.search(title=clean_book_title_for_search(title), author=author, max_items=limit)
+
+
+class ReaderLogin(BaseModel):
+    card: str
+    password: str
+
+
+@app.post("/api/reader/loans")
+async def reader_loans(body: ReaderLogin):
+    """Logs into the reader area with the card and password, returns the current loans and logs out.
+    401 = wrong card/password (login form shown again); 502 = catalog unavailable. Nothing is stored."""
+    try:
+        loans = await reader.fetch_loans(body.card, body.password, scraper)
+    except reader.InvalidCredentials:
+        raise HTTPException(status_code=401, detail="invalid_credentials")
+    except reader.CatalogUnavailable as e:
+        raise HTTPException(status_code=502, detail=str(e))
+    return {"loans": [loan.model_dump() for loan in loans]}
+
+
+@app.post("/api/reader/calendar.ics")
+async def reader_calendar(request: Request):
+    """Turns the loans the client already has into an .ics with due-date alerts (replaces iOS reminders).
+    Posted as a form so iOS Safari opens the response with its "add to Calendar" sheet."""
+    try:
+        form = urllib.parse.parse_qs((await request.body()).decode("utf-8"))
+        data = json.loads(form["payload"][0])
+        loans = [reader.Loan(**item) for item in data.get("loans", [])]
+        days_before = int(data.get("days_before", 2))
+    except (KeyError, ValueError, TypeError, AttributeError, ValidationError):
+        raise HTTPException(status_code=400, detail="Datos de préstamos no válidos.")
+    now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    return Response(
+        content=reader.loans_calendar(loans, days_before, now),
+        media_type="text/calendar; charset=utf-8",
+        headers={"Content-Disposition": 'inline; filename="prestamos-zahori.ics"'},
+    )
 
 
 @app.get("/api/goodreads/shelf")

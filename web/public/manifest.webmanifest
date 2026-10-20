@@ -1,0 +1,17 @@
+{
+  "name": "Zahorí — Bibliotecas de Madrid",
+  "short_name": "Zahorí",
+  "description": "Qué biblioteca pública de Madrid tiene hoy en la estantería los libros de tu lista de Goodreads.",
+  "lang": "es-ES",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fafaf7",
+  "theme_color": "#fafaf7",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "configurations" : [
+    {
+      "id" : "5C1D3F0A-0000-4000-8000-000000000002",
+      "name" : "Live network",
+      "options" : {
+        "environmentVariableEntries" : [
+          { "key" : "ZAHORI_LIVE_TESTS", "value" : "1" }
+        ]
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "language" : "es",
+    "region" : "ES"
+  },
+  "testTargets" : [
+    {
+      "selectedTests" : [
+        "LiveTests"
+      ],
+      "target" : {
+        "containerPath" : "container:ZahoriKit",
+        "identifier" : "ZahoriKitTests",
+        "name" : "ZahoriKitTests"
+      }
+    }
+  ],
+  "version" : 1
+}
